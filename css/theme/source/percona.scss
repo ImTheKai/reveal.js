@@ -1,0 +1,42 @@
+/**
+ * A simple theme using the Percona colors and logo
+ *
+ * This theme is Copyright (C) 2022 Kai Wagner, https://github.com/capri1989. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Chivo:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Chivo', sans-serif;
+$mainColor: #3C3C3C;
+$headingFont: 'Chivo', Impact, sans-serif;
+$headingColor: #3C3C3C;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #fff;
+$linkColor: #E97E03;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color(#fff);
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// Add Percona logo to all slides
+.reveal-viewport {
+    background-image: url(/img/logo.png);
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: 96% 96%;
+}
