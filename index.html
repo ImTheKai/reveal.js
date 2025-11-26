@@ -16,13 +16,13 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-			<section 
-		                        data-markdown="slides/slides.md"
-                		        data-separator="^\n---"  
-		                        data-separator-vertical="^\n--"  
-                		        data-notes="^Note:"  
+				<section
+					data-markdown="slides/slides.md"
+					data-separator="^---$"
+					data-separator-vertical="^--$"
+					data-separator-notes="^Note:"
 					data-charset="utf-8">
-	   		        </section>
+				</section>
 			</div>
 		</div>
 		<script src="dist/reveal.js"></script>
@@ -35,6 +35,11 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+				// Keep slides at a fixed 16:9 base size and avoid upscaling on large screens.
+				// This keeps long text blocks from being blown up and overflowing.
+				width: 1920,
+				height: 1080,
+				maxScale: 1,
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
