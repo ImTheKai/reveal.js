@@ -15,16 +15,44 @@
 	</head>
 	<body>
 		<div class="reveal">
-			<div class="slides">
-				<section
-					data-markdown="slides/slides.md"
-					data-separator="^---$"
-					data-separator-vertical="^--$"
-					data-separator-notes="^Note:"
-					data-charset="utf-8">
-				</section>
-			</div>
+		    <div class="slides">
+		        <section 
+		            data-markdown="" 
+   			    data-separator="^---$"
+		            data-separator-vertical="^--$"
+		            data-separator-notes="^Note:">
+		        </section>
+		    </div>
 		</div>
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script>
+			// --- Configuration ---
+		    const germanSlides = "slides/slides.md";
+		    const englishSlides = "slides/slides-eng.md";
+
+		    // 1. Check URL parameters (e.g., ?lang=en or ?lang=de)
+		    const urlParams = new URLSearchParams(window.location.search);
+		    const forcedLang = urlParams.get('lang');
+
+		    // 2. Check Browser Language
+		    const browserLang = navigator.language || navigator.userLanguage;
+
+		    // 3. Determine Preference (URL overrides Browser)
+		    const langToCheck = forcedLang || browserLang;
+
+		    // 4. Select File (Default is English)
+		    let targetFile = englishSlides;
+
+		    // If language starts with "de" (de, de-DE, de-AT, etc.), use German
+		    if (langToCheck && langToCheck.toLowerCase().startsWith("de")) {
+		        targetFile = germanSlides;
+		    }
+
+		    // 5. Inject the filename
+		    console.log("Detected language:", langToCheck, "| Loading:", targetFile);
+		    document.querySelector("section[data-markdown]").setAttribute("data-markdown", targetFile);
+		</script>
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
