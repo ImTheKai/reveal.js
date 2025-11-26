@@ -32,6 +32,18 @@ Eine Reise durch Lizenzen, Marketing-Fallen und echte Freiheit.
 <p>Kai Wagner | <a href="mailto:kai.wagner@percona.com">kai.wagner@percona.com</a></p>
 
 ---
+
+<img src="img/who-we-are.png" style="background:none; border:none; box-shadow:none;">
+
+--
+
+<img src="img/number-of-database-environments.png" style="background:none; border:none; box-shadow:none;">
+
+--
+
+<img src="img/customer-base.png" style="background:none; border:none; box-shadow:none;">
+
+---
 ## Kurze Umfrage ✋
 
 Wer von euch nutzt Open Source Datenbanken in Produktion?
@@ -132,6 +144,7 @@ Eigentlich gibt es drei Hauptkategorien da sich non-permissive aufteilt in:
 
 --
 ## Weak Copyleft (Begrenzt)
+
 * Der Kompromiss: Brücke zwischen strengem Copyleft und permissiven Lizenzen.
 * Dateibezogen: Änderungen an dieser spezifischen Komponente/Bibliothek müssen offengelegt werden.
 * Verlinkung erlaubt: Darf oft zusammen mit proprietärer Software genutzt werden (z. B. als dynamische Bibliothek), ohne das Hauptprogramm zu "infizieren".
@@ -140,6 +153,7 @@ Eigentlich gibt es drei Hauptkategorien da sich non-permissive aufteilt in:
 
 --
 ## Strong Copyleft (Streng)
+
 * Viraler Effekt: Wenn diese Software genutzt oder integriert wird, muss das gesamte entstehende Werk unter derselben Lizenz stehen.
 * Keine Mischung: Eine Kombination mit proprietärem (geschlossenem) Code ist in der Regel nicht möglich, ohne diesen ebenfalls offenzulegen.
 * Fokus: Schützt die Freiheit der Software am aggressivsten.
