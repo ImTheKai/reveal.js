@@ -35,8 +35,21 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
 // Add Percona logo to all slides
 .reveal-viewport {
+    // Keep the logo on top of all slide content
+    position: relative;
+}
+
+.reveal-viewport::after {
+    content: '';
+    position: fixed;
+    right: 2vw;
+    bottom: 2vh;
+    width: clamp(80px, 10vw, 140px);
+    aspect-ratio: 1 / 1;
     background-image: url(/img/logo.png);
-    background-size: 10%;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: 96% 96%;
+    background-position: center;
+    z-index: 1000;
+    pointer-events: none;
 }

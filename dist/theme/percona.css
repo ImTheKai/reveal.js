@@ -34,10 +34,12 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --r-heading4-size: 1em;
   --r-code-font: monospace;
   --r-link-color: #E97E03;
-  --r-link-color-dark: #9d5502;
-  --r-link-color-hover: #fdaf55;
+  --r-link-color-dark: rgb(198.05, 107.1, 2.55);
+  --r-link-color-hover: rgb(252.813559322, 174.8305084746, 85.186440678);
   --r-selection-background-color: rgba(0, 0, 0, 0.99);
   --r-selection-color: #fff;
+  --r-overlay-element-bg-color: 240, 240, 240;
+  --r-overlay-element-fg-color: 0, 0, 0;
 }
 
 .reveal-viewport {
@@ -358,8 +360,20 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   }
 }
 .reveal-viewport {
+  position: relative;
+}
+
+.reveal-viewport::after {
+  content: "";
+  position: fixed;
+  right: 2vw;
+  bottom: 2vh;
+  width: clamp(80px, 10vw, 140px);
+  aspect-ratio: 1/1;
   background-image: url(/img/logo.png);
-  background-size: 10%;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: 96% 96%;
+  background-position: center;
+  z-index: 1000;
+  pointer-events: none;
 }
