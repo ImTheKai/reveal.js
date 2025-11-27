@@ -38,7 +38,7 @@ Eine Reise durch Lizenzen, Marketing-Fallen und echte Freiheit.
 
 Note:
 
-Deutsch und Englisch je nach Browser Locale verfügbar
+* Deutsch und Englisch je nach Browser Locale verfügbar
 
 --
 
@@ -84,7 +84,7 @@ Wenn man 5 Leute fragt, bekommt man 6 Antworten.
 <img src="img/open-source-services-market-size-by-service-2024-2032.png" style="background:none; border:none; box-shadow:none;">
 
 Note:
-Der Markt soll bis 2032 auf über 118 Milliarden anwachsen. 
+* Der Markt soll bis 2032 auf über 118 Milliarden anwachsen. 
 
 --
 
@@ -130,7 +130,7 @@ Merkt euch den letzten Punkt ("Einsatzzwecke"). Der wird gleich wichtig.
 <!-- .element: class="fragment" -->
 
 Note:
-Die Open Source Initiative (OSI) ist der TÜV für Lizenzen. Sie haben die "Open Source Definition" (OSD) geschrieben, die aus 10 Kriterien besteht.
+* Die Open Source Initiative (OSI) ist der TÜV für Lizenzen. Sie haben die "Open Source Definition" (OSD) geschrieben, die aus 10 Kriterien besteht.
 
 ---
 ## Der Lizenz-Dschungel
@@ -168,22 +168,22 @@ Eigentlich gibt es drei Hauptkategorien da sich non-permissive aufteilt in:
 
 Note:
 
-MIT: Massachusetts Institute of Technology
-BSD: University of California, Berkeley - Berkeley Software Distribution
-Apache 2.0: Besonderheit - Patent Klausel - Schützt Nutzer vor dem verklagt werden durch den Urheber vor Patentverletzungen
+* MIT: Massachusetts Institute of Technology
+* BSD: University of California, Berkeley - Berkeley Software Distribution
+* Apache 2.0: Besonderheit - Patent Klausel - Schützt Nutzer vor dem verklagt werden durch den Urheber vor Patentverletzungen
 
-Die Lizenz sagt ausdrücklich:
+    * Apache 2.0 - Die Lizenz sagt ausdrücklich:
 
-"Wenn ich dir diesen Code gebe, gebe ich dir automatisch auch eine Lizenz für alle meine Patente, die nötig sind, um diesen Code auszuführen."
+    "Wenn ich dir diesen Code gebe, gebe ich dir automatisch auch eine Lizenz für alle meine Patente, die nötig sind, um diesen Code auszuführen."
 
-Damit ist die oben genannte Falle unmöglich. Wer Software unter Apache 2.0 veröffentlicht, kann die Nutzer später nicht wegen Patenten verklagen, die in dieser Software stecken.
+    Damit ist die oben genannte Falle unmöglich. Wer Software unter Apache 2.0 veröffentlicht, kann die Nutzer später nicht wegen Patenten verklagen, die in dieser Software stecken.
 
-2. Die "Retaliation Clause" (Die Vergeltungs-Klausel / Friedenspflicht)
-Das ist der genialste Teil für Unternehmen. Die Klausel besagt:
+    2. Die "Retaliation Clause" (Die Vergeltungs-Klausel / Friedenspflicht)
+    Das ist der genialste Teil für Unternehmen. Die Klausel besagt:
 
-"Wenn du (der Nutzer) jemanden wegen Patentverletzung verklagst, der diese Software nutzt, dann erlischt deine Apache-Lizenz sofort."
+    "Wenn du (der Nutzer) jemanden wegen Patentverletzung verklagst, der diese Software nutzt, dann erlischt deine Apache-Lizenz sofort."
 
-Was das bedeutet: Es ist eine "Waffe", die Patent-Trolle abschreckt. Wenn eine Firma Software unter Apache 2.0 nutzt, darf sie nicht aggressiv gegen die Community oder andere Nutzer wegen Patenten vorgehen, sonst verliert sie selbst das Recht, die Software zu nutzen.
+    Was das bedeutet: Es ist eine "Waffe", die Patent-Trolle abschreckt. Wenn eine Firma Software unter Apache 2.0 nutzt, darf sie nicht aggressiv gegen die Community oder andere Nutzer wegen Patenten vorgehen, sonst verliert sie selbst das Recht, die Software zu nutzen.
 
 --
 ## Weak Copyleft (Begrenzt)
@@ -203,8 +203,9 @@ Was das bedeutet: Es ist eine "Waffe", die Patent-Trolle abschreckt. Wenn eine F
 
 > Beispiele: GPL v2/v3, AGPL.
 
-GPL: Auslöser der "alles muss offengelegt werden", erst bei Distribution, also der Weitergabe als EXE, ISO, Docker-Image etc., somit ein SaaS-Loophole, da keine Weitergabe
-AGPL: Schließt das SaaS-Loophole, da die Pflicht greift bei "Interaktion über ein Netzwerk" -> Nach dem Zugriff, muss der Cloud-Provider den Source Code offenlegen.
+Note:
+* GPL: Auslöser der "alles muss offengelegt werden", erst bei Distribution, also der Weitergabe als EXE, ISO, Docker-Image etc., somit ein SaaS-Loophole, da keine Weitergabe
+* AGPL: Schließt das SaaS-Loophole, da die Pflicht greift bei "Interaktion über ein Netzwerk" -> Nach dem Zugriff, muss der Cloud-Provider den Source Code offenlegen.
 
 --
 ## Lizenz-Dschungel Übersicht
@@ -288,14 +289,14 @@ Mongo:
 CockroachDB:
 * 2015 - Juni 2019 Apache 2.0
 * Juni 2019 - BSL 1.1 (Business Source License) - Schutz vor Cloud - "Anti-AWS-Paragraph". Darf genutzt werden, außer kommerzielle SaaS Dienste aka AWS
---> Besonderheit - Nach 3 Jahren, fällt jede Version automatisch zur offenen Apache 2.0 zurück.
---> Zusätzlich Aufteilung in kostenlose Version und Enterprise Version mit weiteren Features
-* 18. November 2024 - Keine freie Version mehr, nur noch CockroachDB Software License (proprietär), kein Open Source mehr - Kostenlos nutzbar für Einzelentwickler und Firmen unter 10 Mio. USD Jahresumsatz.
+    * Besonderheit - Nach 3 Jahren, fällt jede Version automatisch zur offenen Apache 2.0 zurück.
+    * Zusätzlich Aufteilung in kostenlose Version und Enterprise Version mit weiteren Features
+* 18 November 2024 - Keine freie Version mehr, nur noch CockroachDB Software License (proprietär), kein Open Source mehr - Kostenlos nutzbar für Einzelentwickler und Firmen unter 10 Mio. USD Jahresumsatz.
 
 Elastic:
 * 2010 - 14. Januar 2021 -> Apache 2.0
-* 14. Januar 2021 -> Dual License SSPL + Elastic License (Kein Open Source mehr
-* 29. AUgust 2024 -> Dritte Lizenz mit AGPL
+* 14 Januar 2021 -> Dual License SSPL + Elastic License (Kein Open Source mehr
+* 29 AUgust 2024 -> Dritte Lizenz mit AGPL
 
 Redis: 
 * 20.März 2024 wechsel von BSD zu SSPL und RSALv2 (Redis Source Available License).
@@ -316,8 +317,8 @@ Redis:
 > Das ist kein "Open Source". Das ist **Proprietäre Software**, bei der man den Code lesen darf.
 
 Note:
-SSPL: Der "Giftköder" SSPL: Wer die Software als Service anbietet (SaaS), muss nicht nur den Code der Software selbst offenlegen, sondern auch den Code für das gesamte Management-System drumherum (Backups, Monitoring, User-Verwaltung, Hosting-Infrastruktur).
-BSL: Die neueste, geilste Version gehört uns (proprietär). Die alte Version schenken wir der Community (Open Source). "Change Date" entscheidend. Klassiker: Du darfst die Software nutzen, aber du darfst sie nicht als Managed Service (SaaS) anbieten, der mit uns konkurriert.
+* SSPL: Der "Giftköder" SSPL: Wer die Software als Service anbietet (SaaS), muss nicht nur den Code der Software selbst offenlegen, sondern auch den Code für das gesamte Management-System drumherum (Backups, Monitoring, User-Verwaltung, Hosting-Infrastruktur).
+* BSL: Die neueste, geilste Version gehört uns (proprietär). Die alte Version schenken wir der Community (Open Source). "Change Date" entscheidend. Klassiker: Du darfst die Software nutzen, aber du darfst sie nicht als Managed Service (SaaS) anbieten, der mit uns konkurriert.
 
 
 ---
@@ -364,8 +365,8 @@ BSL: Die neueste, geilste Version gehört uns (proprietär). Die alte Version sc
 
 Note:
 
-Commons Clause: Der Trick: Der Hersteller nimmt eine echte Open-Source-Lizenz (z.B. Apache 2.0) und klebt am Ende einen Zusatztext dran: "Das hier ist Apache 2.0, ABER du darfst den Code nicht verkaufen."
-Non-Commercial Use Only: Echtes Open Source MUSS kommerzielle Nutzung erlauben. Lizenzen wie die CC-BY-NC (Creative Commons Non-Commercial) oder die neue Lizenz von CockroachDB (kostenlos nur für kleine Firmen) diskriminieren bestimmte Nutzergruppen ("Field of Use Restriction"). Komplette Rechtsunsicherheit - was ist kommerziell, wo fängt es an, wo hört es auf?
+* Commons Clause: Der Trick: Der Hersteller nimmt eine echte Open-Source-Lizenz (z.B. Apache 2.0) und klebt am Ende einen Zusatztext dran: "Das hier ist Apache 2.0, ABER du darfst den Code nicht verkaufen."
+* Non-Commercial Use Only: Echtes Open Source MUSS kommerzielle Nutzung erlauben. Lizenzen wie die CC-BY-NC (Creative Commons Non-Commercial) oder die neue Lizenz von CockroachDB (kostenlos nur für kleine Firmen) diskriminieren bestimmte Nutzergruppen ("Field of Use Restriction"). Komplette Rechtsunsicherheit - was ist kommerziell, wo fängt es an, wo hört es auf?
 
 ---
 ## Fazit
@@ -392,7 +393,7 @@ https://www.percona.com/blog/open-source-is-not-just-code-its-integrity/
 
 Note:
 
-Vielleicht sagen wir nicht das was ihr hören wollt, aber das was ihr hören und wissen solltet!
+* Vielleicht sagen wir nicht das was ihr hören wollt, aber das was ihr hören und wissen solltet!
 
 ---
 # Fragen?
