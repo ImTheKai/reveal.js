@@ -129,6 +129,9 @@ Damit ein Etikettenlabel **echt** ist, müssen (unter anderem) diese Bedingungen
 Merkt euch den letzten Punkt ("Einsatzzwecke"). Der wird gleich wichtig.
 <!-- .element: class="fragment" -->
 
+Note:
+Die Open Source Initiative (OSI) ist der TÜV für Lizenzen. Sie haben die "Open Source Definition" (OSD) geschrieben, die aus 10 Kriterien besteht.
+
 ---
 ## Der Lizenz-Dschungel
 
@@ -308,12 +311,14 @@ Redis:
 ### Sie klingen wie Open Source, sind es aber **nicht**.
 
 - **SSPL (Server Side Public License):** Diskriminiert gegen Cloud-Provider. (Verletzt OSI Punkt 6 & 9).
-- **BSL (Business Source License):** "Source Available". Du darfst gucken, aber nicht in Produktion nutzen (unter gewissen Umständen), bis X Jahre vergangen sind.
+- **BSL (Business Source License):** Proprietär auf Zeit. Heute stark eingeschränkt (Source Available), erst in Zukunft echtes Open Source.
 
 > Das ist kein "Open Source". Das ist **Proprietäre Software**, bei der man den Code lesen darf.
 
 Note:
-Der "Giftköder" SSPL: Wer die Software als Service anbietet (SaaS), muss nicht nur den Code der Software selbst offenlegen, sondern auch den Code für das gesamte Management-System drumherum (Backups, Monitoring, User-Verwaltung, Hosting-Infrastruktur).
+SSPL: Der "Giftköder" SSPL: Wer die Software als Service anbietet (SaaS), muss nicht nur den Code der Software selbst offenlegen, sondern auch den Code für das gesamte Management-System drumherum (Backups, Monitoring, User-Verwaltung, Hosting-Infrastruktur).
+BSL: Die neueste, geilste Version gehört uns (proprietär). Die alte Version schenken wir der Community (Open Source). "Change Date" entscheidend. Klassiker: Du darfst die Software nutzen, aber du darfst sie nicht als Managed Service (SaaS) anbieten, der mit uns konkurriert.
+
 
 ---
 ## Warum sollte dich das interessieren?
@@ -334,7 +339,6 @@ Der "Giftköder" SSPL: Wer die Software als Service anbietet (SaaS), muss nicht 
 >  * Valkey grew from 18 to 49 contributors in 18 months
 >  * Valkey averages 80 PRs/month in 2025 vs Redis's 42
 <!-- .element: class="fragment" -->
-
 
 ---
 # Die Reaktion: Forks!
@@ -357,6 +361,11 @@ Der "Giftköder" SSPL: Wer die Software als Service anbietet (SaaS), muss nicht 
 2. Gibt es eine "Commons Clause"? (🚩 Red Flag)
 3. Steht irgendwo "Non-Commercial Use Only"? (🚩 Red Flag)
 4. Wer kontrolliert das Projekt? Eine einzelne Firma oder eine Foundation (CNCF, Apache, Linux Foundation)?
+
+Note:
+
+Commons Clause: Der Trick: Der Hersteller nimmt eine echte Open-Source-Lizenz (z.B. Apache 2.0) und klebt am Ende einen Zusatztext dran: "Das hier ist Apache 2.0, ABER du darfst den Code nicht verkaufen."
+Non-Commercial Use Only: Echtes Open Source MUSS kommerzielle Nutzung erlauben. Lizenzen wie die CC-BY-NC (Creative Commons Non-Commercial) oder die neue Lizenz von CockroachDB (kostenlos nur für kleine Firmen) diskriminieren bestimmte Nutzergruppen ("Field of Use Restriction"). Komplette Rechtsunsicherheit - was ist kommerziell, wo fängt es an, wo hört es auf?
 
 ---
 ## Fazit
