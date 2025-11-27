@@ -1,26 +1,26 @@
 <style>
 .warning-box {
-  border: 2px solid #ff4444;
-  background: rgba(255, 68, 68, 0.15);
-  padding: 18px;
-  border-radius: 10px;
-  margin-top: 14px;
+  border: 2px solid #ff4444;
+  background: rgba(255, 68, 68, 0.15);
+  padding: 18px;
+  border-radius: 10px;
+  margin-top: 14px;
 }
 
 .table {
-  font-size: 0.7em;
+  font-size: 0.7em;
 }
 
 .table table {
-  width: 100%;
-  table-layout: fixed;
+  width: 100%;
+  table-layout: fixed;
 }
 
 .table th,
 .table td {
-  padding: 10px 12px;
-  vertical-align: top;
-  word-break: break-word;
+  padding: 10px 12px;
+  vertical-align: top;
+  word-break: break-word;
 }
 </style>
 
@@ -30,6 +30,27 @@
 A journey through licenses, marketing traps, and true freedom.
 
 <p>Kai Wagner | <a href="mailto:kai.wagner@percona.com">kai.wagner@percona.com</a></p>
+
+---
+## Where can I find the presentation?
+
+<img src="img/qr-code-to-presentation.png" style="background:none; border:none; box-shadow:none;">
+
+Note:
+
+* German and English available depending on browser locale
+
+--
+
+<img src="img/who-we-are.png" style="background:none; border:none; box-shadow:none;">
+
+--
+
+<img src="img/number-of-database-environments.png" style="background:none; border:none; box-shadow:none;">
+
+--
+
+<img src="img/customer-base.png" style="background:none; border:none; box-shadow:none;">
 
 ---
 ## Quick Poll ✋
@@ -56,13 +77,26 @@ If you ask 5 people, you get 6 answers.
 <!-- .element: class="fragment" -->
 3. "I can find it on GitHub." (Dangerous)
 <!-- .element: class="fragment" -->
+
 --
 ## "Costs nothing?!"
 
 <img src="img/open-source-services-market-size-by-service-2024-2032.png" style="background:none; border:none; box-shadow:none;">
 
 Note:
-The market is expected to grow to over 118 billion by 2032.
+* The market is expected to grow to over 118 billion by 2032.
+
+--
+
+## The Victory Lap
+
+*According to db-engines.com, Open Source overtook commercial databases in popularity in 2021.*
+
+<img src="img/db-engine-db-trend-numbers.png" style="background:none; border:none; box-shadow:none;">
+
+--
+
+## Community and Freedom
 
 --
 "Collaborating with a community is about more than developing code. Collaboration is about the freedom to ask questions and offer improvements - that’s the open source way and the power of the open organization."
@@ -89,11 +123,14 @@ For a label to be **genuine**, these conditions (among others) must be met:
 <!-- .element: class="fragment" -->
 - Derived Works: You may modify it (Forks).
 <!-- .element: class="fragment" -->
-- No Discrimination: Against persons, groups, or fields of use.
+- No Discrimination: Against persons, groups, or fields of use (Field of Use).
 <!-- .element: class="fragment" -->
 
 Remember the last point ("Fields of Use"). That will be important in a moment.
 <!-- .element: class="fragment" -->
+
+Note:
+* The Open Source Initiative (OSI) is the certification body for licenses. They wrote the Open Source Definition (OSD), which consists of 10 criteria.
 
 ---
 ## The License Jungle
@@ -129,8 +166,26 @@ Actually, there are three main categories as non-permissive splits into:
 
 > Examples: MIT, Apache 2.0, BSD.
 
+Note:
+
+* MIT: Massachusetts Institute of Technology
+* BSD: University of California, Berkeley - Berkeley Software Distribution
+* Apache 2.0: Special patent clause protects users from being sued by the copyright holder for patent infringement
+
+    * Apache 2.0 explicitly states:
+
+    "If I give you this code, I automatically give you a license for all of my patents needed to run this code."
+
+    This makes the patent trap impossible. Anyone publishing under Apache 2.0 cannot later sue users for patents contained in the software.
+
+    * The "Retaliation Clause"
+    If you sue someone for patent infringement who uses this software, your Apache license terminates immediately.
+
+    It deters patent trolls and prevents aggressive patent action against the community while using the software.
+
 --
 ## Weak Copyleft (Limited)
+
 * The Compromise: A bridge between strong copyleft and permissive licenses.
 * File-based: Changes to *this specific* component/library must be disclosed.
 * Linking Allowed: Can often be used alongside proprietary software (e.g., as a dynamic library) without "infecting" the main program.
@@ -139,11 +194,16 @@ Actually, there are three main categories as non-permissive splits into:
 
 --
 ## Strong Copyleft
+
 * Viral Effect: If this software is used or integrated, the *entire* resulting work must be under the same license.
 * No Mixing: Combining with proprietary (closed) code is generally not possible without disclosing that code as well.
 * Focus: Protects software freedom most aggressively.
 
 > Examples: GPL v2/v3, AGPL.
+
+Note:
+* GPL: Triggers the "everything must be disclosed" obligation only upon distribution (EXE, ISO, Docker image, etc.) which creates a SaaS loophole because there's no distribution.
+* AGPL: Closes the SaaS loophole because the obligation triggers on "interaction over a network"—after access, the cloud provider must disclose the source code.
 
 --
 ## License Jungle Overview
@@ -159,12 +219,27 @@ Actually, there are three main categories as non-permissive splits into:
 Note:
 Permissive: Business-friendly. Copyleft: User-Freedom-friendly (viral). AGPL: Closes the cloud loophole.
 
+--
+## How many OSI-approved Open Source licenses are there? ✋
+
+- ... fewer than 10?
+<!-- .element: class="fragment" -->
+- ... between 10 and 50?
+<!-- .element: class="fragment" -->
+- ... between 50 and 86?
+<!-- .element: class="fragment" -->
+- ... more than 122?
+<!-- .element: class="fragment" -->
+
+Note:
+There are 123 approved licenses as of 27.11.2025.
+
 ---
-## The Victory Lap
+## Do you remember the Open Source market?
 
-*According to db-engines.com, Open Source overtook commercial databases in popularity in 2021.*
-
-<img src="img/db-engine-db-trend-numbers.png" style="background:none; border:none; box-shadow:none;">
+<section>
+<img width="50%" height="100%" src="img/db-engine-db-trend-numbers.png" style="background:none; border:none; box-shadow:none;"><img width="50%" height="100%" src="img/open-source-services-market-size-by-service-2024-2032.png" style="background:none; border:none; box-shadow:none;">
+</section>
 
 --
 ## But this foreseeable success awakened greed.
@@ -192,7 +267,7 @@ How do you catch developers?
 
 | Year | Database | From | To |
 |---|---|---|---|
-| 2018 | **MongoDB** | AGPL | SSPL (Not Open Source) |
+| 2018 | **MongoDB** | GPLv3 | SSPL (Not Open Source) |
 | 2019 | **CockroachDB** | Apache | BSL (Business Source) |
 | 2021 | **Elastic** | Apache | SSPL / Elastic License |
 | 2024 | **Redis** | BSD | RSALv2 / SSPL |
@@ -205,28 +280,43 @@ Note:
 
 Why AGPL? -> Reason: To officially use the term "Open Source" again and regain trust.
 
+Mongo:
+* 2009 to Oct 15, 2018 GPLv3
+* Oct 16, 2018 SSPL
+
 CockroachDB:
 * 2015 - June 2019 Apache 2.0
-* June 2019 - BSL 1.1 (Business Source License) - Protection against Cloud - "Anti-AWS-Paragraph". Can be used, unless commercial SaaS services aka AWS
---> Specialty - After 3 years, every version automatically falls back to open Apache 2.0.
---> Additionally split into free version and Enterprise version with further features
-* Nov 18, 2024 - No more free version, only CockroachDB Software License (proprietary), no longer Open Source - Free to use for individual developers and companies under $10M USD annual revenue.
-Redis
-* March 20, 2024 switch from BSD to SSPL and RSALv2 (Redis Source Available License).
-* Backlash, kicked out of distributions, return with AGPLv3 on May 1, 2025 - Now 3 licenses
-* AGPL is OSI recognized, but Strong Copyleft. Every change to the code must be disclosed. Thus hosting possible again.
+* June 2019 - BSL 1.1 (Business Source License) - Protection against cloud - "Anti-AWS paragraph". Can be used unless as a commercial SaaS service.
+    * After 3 years, every version automatically falls back to open Apache 2.0.
+    * Split into free version and Enterprise version with additional features.
+* Nov 18, 2024 - No free version anymore, only CockroachDB Software License (proprietary), no longer Open Source - Free to use for individual developers and companies under $10M USD annual revenue.
+
+Elastic:
+* 2010 - Jan 14, 2021 -> Apache 2.0
+* Jan 14, 2021 -> Dual license SSPL + Elastic License (No longer Open Source)
+* Aug 29, 2024 -> Third license with AGPL
+
+Redis:
+* Mar 20, 2024 switch from BSD to SSPL and RSALv2 (Redis Source Available License).
+* Backlash, kicked out of distributions, return with AGPLv3 on May 1, 2025 - Now 3 licenses.
+* AGPL is OSI-recognized, but Strong Copyleft. Every change to the code must be disclosed. Hosting becomes possible again.
+
+--
+
+<img src="img/aws-instance-running.png" style="background:none; border:none; box-shadow:none;">
 
 --
 ## What is SSPL / BSL?
 ### They sound like Open Source, but they **are not**.
 
 - **SSPL (Server Side Public License):** Discriminates against cloud providers. (Violates OSI points 6 & 9).
-- **BSL (Business Source License):** "Source Available". You can look, but not use in production (under certain circumstances), until X years have passed.
+- **BSL (Business Source License):** Proprietary on a timer. Highly restricted today (Source Available), only becomes real Open Source in the future.
 
 > This is not "Open Source". This is **Proprietary Software** where you are allowed to read the code.
 
 Note:
-The "Poison Pill" SSPL: Whoever offers the software as a service (SaaS) must not only disclose the software code itself but also the code for the entire management system around it (backups, monitoring, user management, hosting infrastructure).
+* SSPL: The "poison pill" SSPL: Anyone offering the software as a service (SaaS) must not only disclose the software code itself but also the code for the entire management system around it (backups, monitoring, user management, hosting infrastructure).
+* BSL: The newest, best version stays proprietary. The old version is gifted to the community (Open Source). The "change date" is crucial. Classic: You may use the software, but you may not offer it as a managed service (SaaS) that competes with the vendor.
 
 ---
 ## Why should you care?
@@ -243,9 +333,9 @@ The "Poison Pill" SSPL: Whoever offers the software as a service (SaaS) must not
 3. Death of the Community: External contributors stop. The ecosystem dies or splits.
 <!-- .element: class="fragment" -->
 > Redis lost its core developers to Valkey – development plummeted massively.
-> * 37.5% of contributors (9 of 24) stopped contributing to Redis after the fork
-> * Valkey grew from 18 to 49 contributors in 18 months
-> * Valkey averages 80 PRs/month in 2025 vs Redis's 42
+>  * 37.5% of contributors (9 of 24) stopped contributing to Redis after the fork
+>  * Valkey grew from 18 to 49 contributors in 18 months
+>  * Valkey averages 80 PRs/month in 2025 vs Redis's 42
 <!-- .element: class="fragment" -->
 
 ---
@@ -258,7 +348,7 @@ The "Poison Pill" SSPL: Whoever offers the software as a service (SaaS) must not
 - **MongoDB** ➔ License Change ➔ **Percona Server for MongoDB** (Enterprise Features and Backup Tools - SSPL remains active)
 
 > Real Open Source always survives, but the name on the package changes.
-<!-- .element: class="fragment" -->
+<!-- .element: class="fragment warning-box" -->
 
 ---
 ## How do I recognize "real" Open Source?
@@ -270,6 +360,11 @@ The "Poison Pill" SSPL: Whoever offers the software as a service (SaaS) must not
 3. Does it say "Non-Commercial Use Only" anywhere? (🚩 Red Flag)
 4. Who controls the project? A single company or a foundation (CNCF, Apache, Linux Foundation)?
 
+Note:
+
+* Commons Clause: The trick: The vendor takes a real open-source license (e.g., Apache 2.0) and adds a rider: "This is Apache 2.0, BUT you may not sell the code."
+* Non-Commercial Use Only: Real Open Source MUST allow commercial use. Licenses like CC-BY-NC or the new CockroachDB license (free only for small companies) discriminate against certain user groups ("Field of Use Restriction"). Total legal uncertainty—what counts as commercial, where does it start, where does it end?
+
 ---
 ## Conclusion
 
@@ -278,12 +373,24 @@ The "Poison Pill" SSPL: Whoever offers the software as a service (SaaS) must not
 3. **Avoid Lock-in.** Bet on true community standards (Postgres, Valkey, Percona Server for MySQL/MariaDB).
 
 Stay critical. Stay free.
-<!-- .element: class="fragment" -->
+<!-- .element: class="fragment warning-box" -->
 
 --
 ## Open Source Is Not Just Code: It's Integrity
 
 https://www.percona.com/blog/open-source-is-not-just-code-its-integrity/
+
+<img src="img/open-source-blog-post.png" style="background:none; border:none; box-shadow:none;">
+
+--
+
+## 100% Independent! 0% Bullshit!
+
+<img src="img/logo.png" style="background:none; border:none; box-shadow:none;">
+
+Note:
+
+* We might not say what you want to hear, but we will say what you should hear and know.
 
 ---
 # Questions?
