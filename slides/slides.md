@@ -287,7 +287,7 @@ Wie fängt man Entwickler?
 | Jahr | Datenbank | Von | Zu |
 |---|---|---|---|
 | 2018 | **MongoDB** | GPLv3 | SSPL (Nicht Open Source) |
-| 2019 | **CockroachDB** | Apache | BSL (Business Source) |
+| 2019 | **CockroachDB** | Apache | BSL (Business Source)) |
 | 2021 | **Elastic** | Apache | SSPL / Elastic License |
 | 2024 | **Redis** | BSD | RSALv2 / SSPL |
 
@@ -297,7 +297,8 @@ Wie fängt man Entwickler?
 
 Note:
 
-Wieso AGPL? -> Grund: Um den Begriff "Open Source" wieder offiziell nutzen zu dürfen und Vertrauen zurückzugewinnen.
+* Wieso AGPL? -> Grund: Um den Begriff "Open Source" wieder offiziell nutzen zu dürfen und Vertrauen zurückzugewinnen.
+* AGPL ist OSI anerkannt, aber Strong Copyleft. Jede Änderung am Code muss offengelegt werden. Somit Hosting wieder möglich.
 
 Mongo:
 * 2009 bis 15. Oktober 2018 GPLv3
@@ -305,7 +306,7 @@ Mongo:
 
 CockroachDB:
 * 2015 - Juni 2019 Apache 2.0
-* Juni 2019 - BSL 1.1 (Business Source License) - Schutz vor Cloud - "Anti-AWS-Paragraph". Darf genutzt werden, außer kommerzielle SaaS Dienste aka AWS
+* Juni 2019 - BSL 1.1 (Business Source License) ist nicht Open Source nach OSI definition - Schutz vor Cloud - "Anti-AWS-Paragraph". Darf genutzt werden, außer kommerzielle SaaS Dienste aka AWS
     * Besonderheit - Nach 3 Jahren, fällt jede Version automatisch zur offenen Apache 2.0 zurück.
     * Zusätzlich Aufteilung in kostenlose Version und Enterprise Version mit weiteren Features
 * 18 November 2024 - Keine freie Version mehr, nur noch CockroachDB Software License (proprietär), kein Open Source mehr - Kostenlos nutzbar für Einzelentwickler und Firmen unter 10 Mio. USD Jahresumsatz.
@@ -334,6 +335,9 @@ Redis:
 > Das ist kein "Open Source". Das ist **Proprietäre Software**, bei der man den Code lesen darf.
 
 Note:
+* GPL / AGPL: "Zeig mir den Code der Anwendung." (AWS: "Kein Problem, hier ist die unveränderte DB.")
+* SSPL: "Zeig mir den Code deiner gesamten Cloud-Infrastruktur." (AWS: "Niemals!")
+
 * SSPL: Der "Giftköder" SSPL: Wer die Software als Service anbietet (SaaS), muss nicht nur den Code der Software selbst offenlegen, sondern auch den Code für das gesamte Management-System drumherum (Backups, Monitoring, User-Verwaltung, Hosting-Infrastruktur).
 * BSL: Die neueste, geilste Version gehört uns (proprietär). Die alte Version schenken wir der Community (Open Source). "Change Date" entscheidend. Klassiker: Du darfst die Software nutzen, aber du darfst sie nicht als Managed Service (SaaS) anbieten, der mit uns konkurriert.
 
