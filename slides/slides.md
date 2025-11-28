@@ -287,8 +287,8 @@ Wie fängt man Entwickler?
 | Jahr | Datenbank | Von | Zu |
 |---|---|---|---|
 | 2018 | **MongoDB** | GPLv3 | SSPL (Nicht Open Source) |
-| 2019 | **CockroachDB** | Apache | BSL (Business Source)) |
-| 2021 | **Elastic** | Apache | SSPL / Elastic License |
+| 2019 | **CockroachDB** | Apache | BSL (Business Source) |
+| 2021 | **Elasticsearch** | Apache | SSPL / Elastic License |
 | 2024 | **Redis** | BSD | RSALv2 / SSPL |
 
 </div>
@@ -302,7 +302,7 @@ Note:
 
 Mongo:
 * 2009 bis 15. Oktober 2018 GPLv3
-* 16. Oktober 2018 SSPL
+* 16 Oktober 2018 SSPL
 
 CockroachDB:
 * 2015 - Juni 2019 Apache 2.0
