@@ -286,7 +286,7 @@ Wie fängt man Entwickler?
 
 | Jahr | Datenbank | Von | Zu |
 |---|---|---|---|
-| 2018 | **MongoDB** | GPLv3 | SSPL (Nicht Open Source) |
+| 2018 | **MongoDB** | AGPLv3 | SSPL (Nicht Open Source) |
 | 2019 | **CockroachDB** | Apache | BSL (Business Source) |
 | 2021 | **Elasticsearch** | Apache | SSPL / Elastic License |
 | 2024 | **Redis** | BSD | RSALv2 / SSPL |
@@ -301,7 +301,7 @@ Note:
 * AGPL ist OSI anerkannt, aber Strong Copyleft. Jede Änderung am Code muss offengelegt werden. Somit Hosting wieder möglich.
 
 Mongo:
-* 2009 bis 15. Oktober 2018 GPLv3
+* 2009 bis 15. Oktober 2018 AGPLv3
 * 16 Oktober 2018 SSPL
 
 CockroachDB:
