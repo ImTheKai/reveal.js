@@ -60,7 +60,7 @@ Wer von euch nutzt Open Source Datenbanken in Produktion?
 - ... MySQL? PostgreSQL? MongoDB? Redis?
 <!-- .element: class="fragment" -->
 
-Achtung: Mindestens zwei der genannten sind oft **nicht mehr** Open Source.
+Achtung: Mindestens zwei der genannten sind oft **nicht mehr** bzw waren **nicht immer** Open Source.
 <!-- .element: class="fragment warning-box" -->
 
 ---
@@ -71,7 +71,7 @@ Achtung: Mindestens zwei der genannten sind oft **nicht mehr** Open Source.
 
 Wenn man 5 Leute fragt, bekommt man 6 Antworten.
 
-1. "Es kostet nichts." (Falsch)
+1. "Kostet nichts." (Falsch)
 <!-- .element: class="fragment" -->
 2. "Ich kann den Code lesen." (Unzureichend)
 <!-- .element: class="fragment" -->
@@ -137,9 +137,9 @@ Note:
 
 Wir müssen kurz technisch werden. Es gibt zwei Hauptkategorien:
 
-* Permissive 
+* Permissive (permissiv) 
 <!-- .element: class="fragment" -->
-* Non-permissive
+* Non-permissive (nicht permissiv)
 <!-- .element: class="fragment" -->
 
 Eigentlich gibt es drei Hauptkategorien da sich non-permissive aufteilt in: 
@@ -149,13 +149,9 @@ Eigentlich gibt es drei Hauptkategorien da sich non-permissive aufteilt in:
 * Strong Copyleft
 <!-- .element: class="fragment" -->
 
---
-## Was ist der Copyleft-Effekt?
-
-* Grundprinzip: Verbesserungen müssen der Allgemeinheit zur Verfügung gestellt werden („Geben und Nehmen“).
-* Viraler Effekt: Abgeleitete Werke erben zwingend dieselbe Lizenz.
-* Auslöser: Die Pflicht greift erst bei Weitergabe (Distribution) der Software.
-* Interne Nutzung: Privat oder firmenintern (ohne Weitergabe) keine Pflicht zur Weitergabe.
+Note:
+* permissiv aka freizügig oder erlaubend
+* nicht permissiv aka restriktiv oder beschränkend
 
 --
 ## Permissive (Freigiebig)
@@ -186,6 +182,14 @@ Note:
     Was das bedeutet: Es ist eine "Waffe", die Patent-Trolle abschreckt. Wenn eine Firma Software unter Apache 2.0 nutzt, darf sie nicht aggressiv gegen die Community oder andere Nutzer wegen Patenten vorgehen, sonst verliert sie selbst das Recht, die Software zu nutzen.
 
 --
+## Was ist der Copyleft-Effekt?
+
+* Grundprinzip: Verbesserungen müssen der Allgemeinheit zur Verfügung gestellt werden („Geben und Nehmen“).
+* Umfang: Dies betrifft sowohl direkte Änderungen am Quellcode als auch Produkte, in die der Code integriert wurde.
+* Ausnahme: Privat oder firmenintern (ohne Weitergabe) keine Pflicht zur Weitergabe.
+* Variabilität: Wie streng der Effekt greift, hängt von der jeweiligen Lizenz ab (Weak vs. Strong).
+
+--
 ## Weak Copyleft (Begrenzt)
 
 * Der Kompromiss: Brücke zwischen strengem Copyleft und permissiven Lizenzen.
@@ -193,6 +197,19 @@ Note:
 * Verlinkung erlaubt: Darf oft zusammen mit proprietärer Software genutzt werden (z. B. als dynamische Bibliothek), ohne das Hauptprogramm zu "infizieren".
 
 > Beispiele: LGPL, Mozilla Public License (MPL).
+
+Note:
+* Generell zu Weak Copyleft aber speziell MPL: Das "Lego-Prinzip"
+    * Stell dir vor, du baust ein Raumschiff aus Lego.
+    * Dein Raumschiff ist deine proprietäre Software (geheim).
+    * Der Standard-Motor, den du einbaust, ist eine Weak Copyleft Bibliothek (z. B. MPL).
+    * Das Prinzip: Solange du den Motor nur benutzt (einbaust), darf dein Raumschiff geheim bleiben. Der Motor bleibt ein eigenständiges Bauteil.
+    * Die Pflicht (Der Copyleft-Teil): Wenn du den Motor aufschraubst und verbesserst (z. B. schneller machst), musst du den Bauplan für den verbesserten Motor veröffentlichen. Aber der Bauplan für den Rest des Raumschiffs bleibt dein Geheimnis.
+* Fun Fact zu LGPL: Ursprünglich stand die Abkürzung für "Library General Public License".
+    * Die Free Software Foundation (FSF) hat sie jedoch ganz bewusst umbenannt, um eine politische Botschaft zu senden:
+    * Library (Alt): Der Name klang zu "empfehlend" – als wäre dies die Standard-Lizenz für alle Bibliotheken.
+    * Lesser (Neu): Das Wort "Lesser" (Geringer) soll ausdrücken, dass diese Lizenz die Freiheit der Nutzer weniger schützt als die volle GPL.
+* Bei LGPL (Lesser GPL) alles nochmal spezieller: Dynamic linking erlaubt, Static linking schon schwieriger, da du die Objektdateien mitliefern müsstest, damit der Nutzer die Bibliothek neu linken kann. Bei LGPL muss gewährleistet sein, dass der Nutzer, die LGPL Datei problemlos austauschen kannst. z.B. eine .dll oder .so. Sobald das nicht mehr geht in einer .EXE oder Binary, hast du schon ein Problem, weil der Code "verschmolzen" wurde. Dadurch müsste ich dem Nutzer meine kompilierten Objekt-Dateien (.o/.obj) bereitstellen, was Reverse Engineering extrem vereinfacht und somit keine Firma möchte mit proprietärem Code. 
 
 --
 ## Strong Copyleft (Streng)
