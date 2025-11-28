@@ -335,6 +335,8 @@ Redis:
 > Das ist kein "Open Source". Das ist **Proprietäre Software**, bei der man den Code lesen darf.
 
 Note:
+* Die SSPL wurde in 2018 von MongoDB selbst erstellt und eingeführt.
+
 * GPL / AGPL: "Zeig mir den Code der Anwendung." (AWS: "Kein Problem, hier ist die unveränderte DB.")
 * SSPL: "Zeig mir den Code deiner gesamten Cloud-Infrastruktur." (AWS: "Niemals!")
 
