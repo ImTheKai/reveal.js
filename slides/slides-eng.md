@@ -149,16 +149,12 @@ Actually, there are three main categories as non-permissive splits into:
 * Strong Copyleft
 <!-- .element: class="fragment" -->
 
---
-## What is the Copyleft Effect?
-
-* Core Principle: Improvements must be made available to the general public ("Give and Take").
-* Viral Effect: Derived works strictly inherit the same license.
-* Trigger: The obligation applies only upon distribution of the software.
-* Internal Use: Private or internal corporate use (without distribution) triggers no obligation to share.
+Note:
+* Permissive aka liberal or allowing
+* Non-permissive aka restrictive or limiting
 
 --
-## Permissive
+## Permissive (Generous)
 
 * Maximum Freedom: Allows almost anything – use, modification, and distribution (even in commercial/closed software).
 * Minimal Obligations: Usually only the copyright notice and license text must be retained.
@@ -178,10 +174,18 @@ Note:
 
     This makes the patent trap impossible. Anyone publishing under Apache 2.0 cannot later sue users for patents contained in the software.
 
-    * The "Retaliation Clause"
-    If you sue someone for patent infringement who uses this software, your Apache license terminates immediately.
+    * The "Retaliation Clause" (Peace Clause)
+    If you (the user) sue someone for patent infringement who uses this software, your Apache license terminates immediately.
 
     It deters patent trolls and prevents aggressive patent action against the community while using the software.
+
+--
+## What is the Copyleft Effect?
+
+* Core Principle: Improvements must be made available to the general public ("Give and Take").
+* Scope: This applies to direct changes to the source code and to products in which the code is integrated.
+* Exception: Private or internal company use (without distribution) requires no obligation to share.
+* Variability: How strictly it applies depends on the respective license (Weak vs. Strong).
 
 --
 ## Weak Copyleft (Limited)
@@ -191,6 +195,19 @@ Note:
 * Linking Allowed: Can often be used alongside proprietary software (e.g., as a dynamic library) without "infecting" the main program.
 
 > Examples: LGPL, Mozilla Public License (MPL).
+
+Note:
+* Generally for Weak Copyleft, specifically MPL: The "Lego Principle"
+    * Imagine building a spaceship out of Lego.
+    * Your spaceship is your proprietary software (secret).
+    * The standard motor you plug in is a Weak Copyleft library (e.g., MPL).
+    * The principle: As long as you just use the motor (plug it in), your spaceship can stay secret. The motor remains its own building block.
+    * The obligation (the Copyleft part): If you open the motor and improve it (make it faster), you must publish the blueprint for the improved motor. But the blueprint for the rest of the spaceship remains your secret.
+* Fun fact about LGPL: It originally stood for "Library General Public License."
+    * The Free Software Foundation (FSF) renamed it intentionally to send a political message:
+    * Library (old): The name sounded too "recommended"—as if this were the default license for all libraries.
+    * Lesser (new): "Lesser" signals that this license protects user freedom less than the full GPL.
+* With LGPL things get more specific: Dynamic linking is allowed. Static linking is trickier because you'd need to ship the object files so users can relink the library. Under LGPL, it must remain possible for the user to swap the LGPL file (e.g., .dll or .so). If that's impossible because the code is fused into an .EXE or binary, you'd have to provide your compiled object files (.o/.obj), which greatly eases reverse engineering—something no company wants with proprietary code.
 
 --
 ## Strong Copyleft
@@ -267,9 +284,9 @@ How do you catch developers?
 
 | Year | Database | From | To |
 |---|---|---|---|
-| 2018 | **MongoDB** | GPLv3 | SSPL (Not Open Source) |
+| 2018 | **MongoDB** | AGPLv3 | SSPL (Not Open Source) |
 | 2019 | **CockroachDB** | Apache | BSL (Business Source) |
-| 2021 | **Elastic** | Apache | SSPL / Elastic License |
+| 2021 | **Elasticsearch** | Apache | SSPL / Elastic License |
 | 2024 | **Redis** | BSD | RSALv2 / SSPL |
 
 </div>
@@ -281,7 +298,7 @@ Note:
 Why AGPL? -> Reason: To officially use the term "Open Source" again and regain trust.
 
 Mongo:
-* 2009 to Oct 15, 2018 GPLv3
+* 2009 to Oct 15, 2018 AGPLv3
 * Oct 16, 2018 SSPL
 
 CockroachDB:
@@ -315,7 +332,10 @@ Redis:
 > This is not "Open Source". This is **Proprietary Software** where you are allowed to read the code.
 
 Note:
+* The SSPL was created and introduced by MongoDB itself in 2018.
 * SSPL: The "poison pill" SSPL: Anyone offering the software as a service (SaaS) must not only disclose the software code itself but also the code for the entire management system around it (backups, monitoring, user management, hosting infrastructure).
+* GPL / AGPL: "Show me the application code." (AWS: "No problem, here's the unmodified DB.")
+* SSPL: "Show me the code of your entire cloud infrastructure." (AWS: "Never!")
 * BSL: The newest, best version stays proprietary. The old version is gifted to the community (Open Source). The "change date" is crucial. Classic: You may use the software, but you may not offer it as a managed service (SaaS) that competes with the vendor.
 
 ---
