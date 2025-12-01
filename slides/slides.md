@@ -78,6 +78,8 @@ Wenn man 5 Leute fragt, bekommt man 6 Antworten.
 3. "Ich kann es auf GitHub finden." (Gefährlich)
 <!-- .element: class="fragment" -->
 
+Note:
+* Wer im Raum hat schonmal versucht für "Open Source" zu bezahlen und ist dafür zu seinem Chef oder Finanz Team gegangen? Das existiert dort gar nicht. 
 --
 ## "Kostet nichts?!"
 
@@ -103,6 +105,9 @@ Note:
 
 https://www.redhat.com/en/topics/api
 
+Note:
+* SUSE/RedHat waren mit die Ersten, die "Open Source Software genommen haben und es auf einem Medium vertrieben haben und dazu eine Telefonnummer mit auf die Box gepackt haben für Support und Probleme.
+
 --
 ## Free Speech vs. Free Beer
 
@@ -111,6 +116,9 @@ https://www.redhat.com/en/topics/api
 > -- Richard Stallman --
 
 In der **Open Source (OSI Definition)** geht es um **Freiheiten**, nicht um den Preis.
+
+Note:
+* Wie frei ist ein Freibier? Ziemlich eingeschränkt, nur zu dem aktuellen Zeitpunkt. Kein mitnehmen, weiterverkaufen, aufheben für später etc. 
 
 ---
 ## Die OSI Definition (TL;DR)
@@ -347,12 +355,12 @@ Note:
 ---
 ## Warum sollte dich das interessieren?
 
-*"Ich bin ja kein Cloud Provider, mir doch egal?"*
+*"Ich bin ja kein Cloud Provider, mir doch egal?!"*
 
 ❌ Falsch.
 <!-- .element: class="fragment fade-up" -->
 
-1. Vendor Lock-in: Du bist dem Hersteller ausgeliefert. Preiserhöhungen? Pech gehabt.
+1. Vendor Lock-in: Du bist dem Hersteller ausgeliefert. Preiserhöhungen? Pech gehabt!
 <!-- .element: class="fragment" -->
 2. Lizenz-Compliance: Darf ich das in meiner SaaS-App nutzen? Brauche ich Anwälte?
 <!-- .element: class="fragment" -->
@@ -392,14 +400,27 @@ Note:
 * Non-Commercial Use Only: Echtes Open Source MUSS kommerzielle Nutzung erlauben. Lizenzen wie die CC-BY-NC (Creative Commons Non-Commercial) oder die neue Lizenz von CockroachDB (kostenlos nur für kleine Firmen) diskriminieren bestimmte Nutzergruppen ("Field of Use Restriction"). Komplette Rechtsunsicherheit - was ist kommerziell, wo fängt es an, wo hört es auf?
 
 ---
-## Fazit
+# Fazit
 
-1. **Namen sind Schall und Rauch.** Nur die Lizenz zählt.
+--
+
+1. **Namen sind Schall und Rauch.**
+   > *Elastic nannte es 'Free and Open', während AWS es als irreführend entlarvte und OpenSearch forkte.*
+
+--
+
 2. **Source Available ≠ Open Source.**
-3. **Vermeidet Lock-in.** Setzt auf echte Community-Standards (Postgres, Valkey, Percona Server for MySQL/MariaDB).
+   > *Die OSI hat offiziell bestätigt: Die SSPL (MongoDB) ist KEINE Open Source Lizenz, egal wie oft der Begriff im Marketing fällt.*
+
+--
+
+3. **Vermeidet Lock-in.**
+   > *HashiCorp (Terraform) zeigte 2023, wie schnell eine Lizenz kippen kann. Nur echte Standards wie **OpenTofu** (oder **Valkey** bei Redis) bieten einen Ausweg.*
+
+--
 
 Bleibt kritisch. Bleibt frei.
-<!-- .element: class="fragment warning-box" -->
+<!-- .element: class="warning-box" -->
 
 --
 ## Open Source Is Not Just Code: It's Integrity
