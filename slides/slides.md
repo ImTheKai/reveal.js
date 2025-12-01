@@ -135,7 +135,7 @@ Damit ein Etikettenlabel **echt** ist, müssen (unter anderem) diese Bedingungen
 <!-- .element: class="fragment" -->
 
 Merkt euch den letzten Punkt ("Einsatzzwecke"). Der wird gleich wichtig.
-<!-- .element: class="fragment" -->
+<!-- .element: class="fragment warning-box"-->
 
 Note:
 * Die Open Source Initiative (OSI) ist der TÜV für Lizenzen. Sie haben die "Open Source Definition" (OSD) geschrieben, die aus 10 Kriterien besteht.
@@ -235,16 +235,63 @@ Note:
 --
 ## Lizenz-Dschungel Übersicht
 
-<div class="table">
+<style>
+.license-box {
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 15px !important;
+  border-radius: 8px;
+  font-size: 0.8em !important;
+  display: flex;
+  align-items: center;
+}
+.license-icon {
+  font-size: 1.5em;
+  margin-right: 20px;
+  min-width: 50px;
+  text-align: center;
+}
+.license-content {
+  flex-grow: 1;
+}
+.l-green { background: rgba(46, 204, 113, 0.15); border-left: 8px solid #2ecc71; }
+.l-yellow { background: rgba(241, 196, 15, 0.15); border-left: 8px solid #f1c40f; }
+.l-orange { background: rgba(230, 126, 34, 0.15); border-left: 8px solid #e67e22; }
+.l-red { background: rgba(231, 76, 60, 0.15); border-left: 8px solid #e74c3c; }
+</style>
 
-| Permissive | Weak Copyleft | Strong Copyleft |
-| --- | --- | --- |
-| Mach was du willst.<br><br>MIT<br>Apache 2.0<br>BSD | Änderungen müssen zurückgegeben werden.<br><br>MPL<br>LGPL | Alles muss offengelegt werden.<br><br>GPL v2/v3<br>AGPL |
-
+<!-- GRÜN: PERMISSIVE -->
+<div class="license-box l-green fragment fade-up">
+  <div class="license-icon">🟢</div>
+  <div class="license-content">
+    <strong>Permissive (Freie Fahrt)</strong><br>
+    "Mach was du willst." Keine Einschränkung für Proprietäres.<br>
+    <em>MIT, BSD, Apache 2.0</em>
+  </div>
 </div>
 
-Note:
-Permissive: Business-freundlich. Copyleft: User-Freedom-freundlich (viral). AGPL: Schließt das Cloud-Loophole.
+<!-- GELB: WEAK COPYLEFT -->
+<div class="license-box l-yellow fragment fade-up">
+  <div class="license-icon">🟡</div>
+  <div class="license-content">
+    <strong>Weak Copyleft (Schulterblick)</strong><br>
+    "Dateien getrennt halten." Änderungen an Libs zurückgeben.<br>
+    <em>MPL, LGPL</em>
+  </div>
+</div>
+
+<!-- ORANGE: STRONG COPYLEFT -->
+<div class="license-box l-orange fragment fade-up">
+  <div class="license-icon">🟠</div>
+  <div class="license-content">
+    <strong>Strong Copyleft (Vorfahrt beachten)</strong><br>
+    "Viraler Effekt." Infiziert das gesamte Projekt bei Kontakt.<br>
+    <em>GPL v2/v3, AGPL</em>
+  </div>
+</div>
+
+Nochmal schnell weg bevor die Ampel auf **rot** wechselt!
+<!-- .element: class="fragment warning-box"-->
 
 --
 ## Wie viele OSI anerkannte Open Source Lizenzen gibt es? ✋
@@ -275,16 +322,37 @@ Es sind 123 anerkannte Lizenzen, stand 27.11.2025
 ## Das Lockvogelangebot
 ### (Der Köder-Trick)
 
-Wie fängt man Entwickler?
+<!-- Flex-Container für 2 Spalten -->
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-top: 50px;">
 
-1. Baut eine coole Datenbank.
-<!-- .element: class="fragment" -->
-2. Lizenziert sie unter Apache 2.0 (maximale Adoption).
-<!-- .element: class="fragment" -->
-3. Wartet, bis AWS/Google/Azure sie als Service anbieten.
-<!-- .element: class="fragment" -->
-4. PANIK! "Die Cloud Provider stehlen unseren Umsatz!"
-<!-- .element: class="fragment" -->
+  <!-- Linke Spalte: Text (55% Breite) -->
+  <div style="width: 55%; text-align: left;">
+    <p>Wie fängt man Entwickler?</p>
+    <ol>
+      <li class="fragment" style="margin-bottom: 15px;">
+        Baut eine coole Datenbank.
+      </li>
+      <li class="fragment" style="margin-bottom: 15px;">
+        Lizenziert sie unter <b>Apache 2.0</b> (maximale Adoption).
+      </li>
+      <li class="fragment" style="margin-bottom: 15px;">
+        Wartet, bis AWS/Google/Azure sie als Service anbieten.
+      </li>
+      <!-- Der letzte Punkt rot und fett für Dramatik -->
+      <li class="fragment" style="color: #ff4444; font-weight: bold; margin-top: 25px;">
+        PANIK! "Die Cloud Provider stehlen unseren Umsatz!"
+      </li>
+    </ol>
+  </div>
+
+  <!-- Rechte Spalte: Bild (40% Breite) -->
+  <div style="width: 40%;">
+    <img src="img/aws-surfing.webp" 
+         class="fragment" 
+         style="width: 70%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transform: rotate(2deg);">
+  </div>
+
+</div>
 
 ---
 ## Die Timeline des "Verrats"
@@ -351,36 +419,128 @@ Note:
 * SSPL: Der "Giftköder" SSPL: Wer die Software als Service anbietet (SaaS), muss nicht nur den Code der Software selbst offenlegen, sondern auch den Code für das gesamte Management-System drumherum (Backups, Monitoring, User-Verwaltung, Hosting-Infrastruktur).
 * BSL: Die neueste, geilste Version gehört uns (proprietär). Die alte Version schenken wir der Community (Open Source). "Change Date" entscheidend. Klassiker: Du darfst die Software nutzen, aber du darfst sie nicht als Managed Service (SaaS) anbieten, der mit uns konkurriert.
 
+--
+
+## Der Lizenz-Dschungel (inklusive Rotphase)
+<style>
+.license-box {
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 15px !important;
+  border-radius: 8px;
+  font-size: 0.8em !important;
+  display: flex;
+  align-items: center;
+}
+.license-icon {
+  font-size: 1.5em;
+  margin-right: 20px;
+  min-width: 50px;
+  text-align: center;
+}
+.license-content {
+  flex-grow: 1;
+}
+.l-green { background: rgba(46, 204, 113, 0.15); border-left: 8px solid #2ecc71; }
+.l-yellow { background: rgba(241, 196, 15, 0.15); border-left: 8px solid #f1c40f; }
+.l-orange { background: rgba(230, 126, 34, 0.15); border-left: 8px solid #e67e22; }
+.l-red { background: rgba(231, 76, 60, 0.15); border-left: 8px solid #e74c3c; }
+</style>
+
+<!-- GRÜN: PERMISSIVE -->
+<div class="license-box l-green">
+  <div class="license-icon">🟢</div>
+  <div class="license-content">
+    <strong>Permissive (Freie Fahrt)</strong><br>
+    "Mach was du willst." Keine Einschränkung für Proprietäres.<br>
+    <em>MIT, BSD, Apache 2.0</em>
+  </div>
+</div>
+
+<!-- GELB: WEAK COPYLEFT -->
+<div class="license-box l-yellow">
+  <div class="license-icon">🟡</div>
+  <div class="license-content">
+    <strong>Weak Copyleft (Schulterblick)</strong><br>
+    "Dateien getrennt halten." Änderungen an Libs zurückgeben.<br>
+    <em>MPL, LGPL</em>
+  </div>
+</div>
+
+<!-- ORANGE: STRONG COPYLEFT -->
+<div class="license-box l-orange">
+  <div class="license-icon">🟠</div>
+  <div class="license-content">
+    <strong>Strong Copyleft (Vorfahrt beachten)</strong><br>
+    "Viraler Effekt." Infiziert das gesamte Projekt bei Kontakt.<br>
+    <em>GPL v2/v3, AGPL</em>
+  </div>
+</div>
+
+<!-- ROT: PROPRIETÄR -->
+<div class="license-box l-red">
+  <div class="license-icon">🔴</div>
+  <div class="license-content">
+    <strong>Fake Open Source (Mautstelle)</strong><br>
+    "Source Available." Diskriminiert Nutzung (Cloud/SaaS).<br>
+    <em>SSPL, BSL, RSAL</em>
+  </div>
+</div>
 
 ---
-## Warum sollte dich das interessieren?
+## Warum sollte mich das interessieren?
 
 *"Ich bin ja kein Cloud Provider, mir doch egal?!"*
 
 ❌ Falsch.
-<!-- .element: class="fragment fade-up" -->
+<!-- .element: class="fragment warning-box" -->
 
-1. Vendor Lock-in: Du bist dem Hersteller ausgeliefert. Preiserhöhungen? Pech gehabt!
-<!-- .element: class="fragment" -->
-2. Lizenz-Compliance: Darf ich das in meiner SaaS-App nutzen? Brauche ich Anwälte?
-<!-- .element: class="fragment" -->
-3. Tod der Community: Externe Contributor hören auf. Das Ökosystem stirbt oder spaltet sich.
-<!-- .element: class="fragment" -->
-> Redis verlor seine Core-Entwickler an Valkey – die Entwicklung brach massiv ein.
->  * 37.5% of contributors (9 of 24) stopped contributing to Redis after the fork
->  * Valkey grew from 18 to 49 contributors in 18 months
->  * Valkey averages 80 PRs/month in 2025 vs Redis's 42
-<!-- .element: class="fragment" -->
+<ol>
+  <li class="fragment" style="margin-bottom: 20px;">
+    <strong>Vendor Lock-in:</strong> Du bist dem Hersteller ausgeliefert. Preiserhöhungen? Pech gehabt!
+  </li>
+  <li class="fragment" style="margin-bottom: 20px;">
+    <strong>Lizenz-Compliance:</strong> Darf ich das in meiner SaaS-App nutzen? Brauche ich Anwälte?
+  </li>
+  <li class="fragment">
+    <strong>Tod der Community:</strong> Externe Contributor hören auf. Das Ökosystem stirbt oder spaltet sich.
+  </li>
+</ol>
+
+<!-- DAS NEUE ELEMENT: Die rote Box -->
+  <div class="fragment" style="
+      margin-top: 30px;
+      border: 3px solid #ff4444;
+      background: rgba(255, 68, 68, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+  ">
+    <h3 style="color: #ff4444; margin: 0 0 10px 0;">Aktuelles Beispiel: Redis vs. Valkey</h3>
+    <ul style="font-size: 0.8em; list-style-type: '⚠️  ';">
+      <li><b>37.5% der Contributor</b> verließen Redis nach dem Lizenzwechsel.</li>
+      <li>Valkey wuchs in 18 Monaten von 18 auf <b>49 Contributor</b>.</li>
+      <li>Entwicklungstempo 2025:<br>
+          * Redis: ~42 PRs/Monat <br>
+          * Valkey: <b>~80 PRs/Monat</b> 🚀
+      </li>
+    </ul>
+  </div>
+</section>
 
 ---
 # Die Reaktion: Forks!
 ## Die Community lässt sich das nicht gefallen.
+<!-- .element: class="fragment" -->
 
-- **Elasticsearch** ➔ Lizenzänderung ➔ **OpenSearch** (AWS/Community)
-- **Redis** ➔ Lizenzänderung ➔ **Valkey** (Linux Foundation)
-- **MySQL** ➔ Oracle Kauf ➔ **MariaDB / Percona Server for MySQL**
-- **MongoDB** ➔ Lizenzänderung ➔ **Percona Server for MongoDB** (Enterprise Features und Backup Tools - SSPL weiterhin aktiv)
-
+- Elasticsearch ➔ Lizenzänderung ➔ OpenSearch (AWS/Community)
+<!-- .element: class="fragment" -->
+- Redis ➔ Lizenzänderung ➔ Valkey (Linux Foundation)
+<!-- .element: class="fragment" -->
+- MySQL ➔ Oracle Kauf ➔ MariaDB / Percona Server for MySQL
+<!-- .element: class="fragment" -->
+- MongoDB ➔ Lizenzänderung ➔ Percona Server for MongoDB (Enterprise Features und Backup Tools - SSPL weiterhin aktiv)
+<!-- .element: class="fragment" -->
 > Echte Open Source überlebt immer, aber der Name auf der Packung ändert sich.
 <!-- .element: class="fragment warning-box" -->
 
@@ -390,8 +550,11 @@ Note:
 **Die Checkliste:**
 
 1. Ist die Lizenz OSI-approved? (opensource.org)
+
 2. Gibt es eine "Commons Clause"? (🚩 Red Flag)
+
 3. Steht irgendwo "Non-Commercial Use Only"? (🚩 Red Flag)
+
 4. Wer kontrolliert das Projekt? Eine einzelne Firma oder eine Foundation (CNCF, Apache, Linux Foundation)?
 
 Note:
