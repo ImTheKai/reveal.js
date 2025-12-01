@@ -60,7 +60,7 @@ Wer von euch nutzt Open Source Datenbanken in Produktion?
 - ... MySQL? PostgreSQL? MongoDB? Redis?
 <!-- .element: class="fragment" -->
 
-Achtung: Mindestens zwei der genannten sind oft **nicht mehr** bzw waren **nicht immer** Open Source.
+Achtung: Mindestens zwei der genannten sind **nicht mehr** bzw waren **nicht immer** Open Source.
 <!-- .element: class="fragment warning-box" -->
 
 ---
@@ -78,12 +78,20 @@ Wenn man 5 Leute fragt, bekommt man 6 Antworten.
 3. "Ich kann es auf GitHub finden." (Gefährlich)
 <!-- .element: class="fragment" -->
 
+Achtung: Mindestens eine Plattform auf dieser Folie ist nicht Open Source!
+<!-- .element: class="fragment warning-box" -->
+
 Note:
 * Wer im Raum hat schonmal versucht für "Open Source" zu bezahlen und ist dafür zu seinem Chef oder Finanz Team gegangen? Das existiert dort gar nicht. 
---
-## "Kostet nichts?!"
 
-<img src="img/open-source-services-market-size-by-service-2024-2032.png" style="background:none; border:none; box-shadow:none;">
+--
+
+<img src="img/github-isnt-open-source.png" style="background:none; border:none; box-shadow:none;">
+
+--
+# "Kostet nichts?!"
+
+<img src="img/open-source-services-market-size-by-service-2024-2032.png" style="background:none; border:none; box-shadow:none; width:1300px;">
 
 Note:
 * Der Markt soll bis 2032 auf über 118 Milliarden anwachsen. 
@@ -94,7 +102,7 @@ Note:
 
 *Laut db-engines.com hat Open Source im Jahr 2021 kommerzielle Datenbanken in der Popularität überholt.*
 
-<img src="img/db-engine-db-trend-numbers.png" style="background:none; border:none; box-shadow:none;">
+<img src="img/db-engine-db-trend-numbers.png" style="background:none; border:none; box-shadow:none; width:1300px;">
 
 --
 
@@ -579,6 +587,19 @@ Note:
 
 3. **Vermeidet Lock-in.**
    > *HashiCorp (Terraform) zeigte 2023, wie schnell eine Lizenz kippen kann. Nur echte Standards wie **OpenTofu** (oder **Valkey** bei Redis) bieten einen Ausweg.*
+
+Note:
+
+* Akt 1: Der Standard (Bis August 2023)
+    - Terraform war der absolute Industriestandard für "Infrastructure as Code" (IaC).
+    - Lizenz: MPL 2.0 (Weak Copyleft / Open Source).
+    - Die Situation: Ein riesiges Ökosystem entstand. Andere Firmen (wie Spacelift, Scalr, Env0) bauten Produkte um Terraform herum, um es besser nutzbar zu machen. HashiCorp fand das toll, solange Terraform wuchs.
+
+* Akt 2: Der "Rug Pull" (10. August 2023)
+    - HashiCorp änderte über Nacht die Lizenz zu BSL v1.1 (Business Source License).
+    - Das Ziel: Sie wollten die Konkurrenten (Spacelift & Co.) töten. Die Lizenz besagt: "Du darfst Terraform nutzen, außer du baust ein Produkt, das mit HashiCorp konkurriert."
+    - Das Problem für alle: Die Definition von "Konkurrenz" ist schwammig. Anwälte in großen Firmen (Allianz, Daimler, Banken) schlugen Alarm. Niemand wusste, ob interne Plattformen plötzlich lizenzpflichtig werden.
+    - Der Vertrauensbruch: HashiCorp hatte jahrelang versichert, Terraform bleibe Open Source.
 
 --
 
