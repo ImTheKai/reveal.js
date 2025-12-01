@@ -27,7 +27,7 @@
 ## False Labeling
 ### How "Open Source" is Your Database Really?
 
-A journey through licenses, marketing traps, and true freedom.
+A journey through licenses, marketing traps, and real freedom.
 
 <p>Kai Wagner | <a href="mailto:kai.wagner@percona.com">kai.wagner@percona.com</a></p>
 
@@ -60,7 +60,7 @@ Who among you uses Open Source databases in production?
 - ... MySQL? PostgreSQL? MongoDB? Redis?
 <!-- .element: class="fragment" -->
 
-Warning: At least two of those mentioned are often **no longer** or were **not always** Open Source.
+Warning: At least two of those mentioned are **no longer** or were **not always** Open Source.
 <!-- .element: class="fragment warning-box" -->
 
 ---
@@ -71,19 +71,27 @@ Warning: At least two of those mentioned are often **no longer** or were **not a
 
 If you ask 5 people, you get 6 answers.
 
-1. "It costs nothing." (False)
+1. "Costs nothing." (False)
 <!-- .element: class="fragment" -->
 2. "I can read the code." (Insufficient)
 <!-- .element: class="fragment" -->
 3. "I can find it on GitHub." (Dangerous)
 <!-- .element: class="fragment" -->
 
+Warning: At least one platform on this slide is not Open Source!
+<!-- .element: class="fragment warning-box" -->
+
 Note:
 * Who here has ever tried to pay for "Open Source" and had to go to their boss or finance team? That process basically doesn't exist.
---
-## "Costs nothing?!"
 
-<img src="img/open-source-services-market-size-by-service-2024-2032.png" style="background:none; border:none; box-shadow:none;">
+--
+
+<img src="img/github-isnt-open-source.png" style="background:none; border:none; box-shadow:none;">
+
+--
+# "Costs nothing?!"
+
+<img src="img/open-source-services-market-size-by-service-2024-2032.png" style="background:none; border:none; box-shadow:none; width:1300px;">
 
 Note:
 * The market is expected to grow to over 118 billion by 2032.
@@ -94,7 +102,7 @@ Note:
 
 *According to db-engines.com, Open Source overtook commercial databases in popularity in 2021.*
 
-<img src="img/db-engine-db-trend-numbers.png" style="background:none; border:none; box-shadow:none;">
+<img src="img/db-engine-db-trend-numbers.png" style="background:none; border:none; box-shadow:none; width:1300px;">
 
 --
 
@@ -106,7 +114,7 @@ Note:
 https://www.redhat.com/en/topics/api
 
 Note:
-* SUSE/RedHat were among the first to ship open source software on media and put a support phone number on the box.
+* SUSE/RedHat were among the first to take Open Source software, ship it on a medium, and add a phone number on the box for support and issues.
 
 --
 ## Free Speech vs. Free Beer
@@ -132,22 +140,25 @@ For a label to be **genuine**, these conditions (among others) must be met:
 - Derived Works: You may modify it (Forks).
 <!-- .element: class="fragment" -->
 - No Discrimination: Against persons, groups, or fields of use (Field of Use).
+<!-- .element: class="fragment" -->
+
+Remember the last point ("Fields of use"). It will be important in a moment.
 <!-- .element: class="fragment warning-box"-->
 
 Note:
-* The Open Source Initiative (OSI) is the certification body for licenses. They wrote the Open Source Definition (OSD), which consists of 10 criteria.
+* The Open Source Initiative (OSI) is the TUV-style certifier for licenses. They wrote the "Open Source Definition" (OSD), which consists of 10 criteria.
 
 ---
 ## The License Jungle
 
 We need to get technical for a moment. There are two main categories:
 
-* Permissive
+* Permissive (permissive) 
 <!-- .element: class="fragment" -->
-* Non-permissive
+* Non-permissive (non-permissive)
 <!-- .element: class="fragment" -->
 
-Actually, there are three main categories as non-permissive splits into:
+Actually, there are three main categories because non-permissive splits into: 
 <!-- .element: class="fragment" -->
 * Weak Copyleft
 <!-- .element: class="fragment" -->
@@ -155,11 +166,11 @@ Actually, there are three main categories as non-permissive splits into:
 <!-- .element: class="fragment" -->
 
 Note:
-* Permissive aka liberal or allowing
-* Non-permissive aka restrictive or limiting
+* permissive aka liberal or allowing
+* non-permissive aka restrictive or limiting
 
 --
-## Permissive (Generous)
+## Permissive (Open-handed)
 
 * Maximum freedom: Allows almost anything—use, modification, and distribution (also in commercial/closed software).
 * Minimal obligations: Usually only the copyright notice and license text must be retained.
@@ -521,6 +532,7 @@ Note:
       </li>
     </ul>
   </div>
+</section>
 
 ---
 # The Reaction: Forks!
@@ -573,6 +585,19 @@ Note:
 
 3. **Avoid lock-in.**
    > *HashiCorp (Terraform) showed in 2023 how fast a license can flip. Only true standards like **OpenTofu** (or **Valkey** for Redis) give you an exit.*
+
+Note:
+
+* Act 1: The Standard (until August 2023)
+    - Terraform was the absolute industry standard for "Infrastructure as Code" (IaC).
+    - License: MPL 2.0 (Weak Copyleft / Open Source).
+    - The situation: A huge ecosystem emerged. Other companies (like Spacelift, Scalr, Env0) built products around Terraform to make it more usable. HashiCorp loved this as long as Terraform was growing.
+
+* Act 2: The "Rug Pull" (August 10, 2023)
+    - HashiCorp changed the license overnight to BSL v1.1 (Business Source License).
+    - The goal: Kill the competitors (Spacelift & Co.). The license says: "You may use Terraform, unless you build a product that competes with HashiCorp."
+    - The problem for everyone: The definition of "competition" is fuzzy. Lawyers in large companies (Allianz, Daimler, banks) sounded the alarm. No one knew whether internal platforms would suddenly become license-liable.
+    - The breach of trust: HashiCorp had assured for years that Terraform would remain Open Source.
 
 --
 
