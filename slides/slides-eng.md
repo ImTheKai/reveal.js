@@ -60,7 +60,7 @@ Who among you uses Open Source databases in production?
 - ... MySQL? PostgreSQL? MongoDB? Redis?
 <!-- .element: class="fragment" -->
 
-Warning: At least two of those mentioned are often **no longer** Open Source.
+Warning: At least two of those mentioned are often **no longer** or were **not always** Open Source.
 <!-- .element: class="fragment warning-box" -->
 
 ---
@@ -78,6 +78,8 @@ If you ask 5 people, you get 6 answers.
 3. "I can find it on GitHub." (Dangerous)
 <!-- .element: class="fragment" -->
 
+Note:
+* Who here has ever tried to pay for "Open Source" and had to go to their boss or finance team? That process basically doesn't exist.
 --
 ## "Costs nothing?!"
 
@@ -103,6 +105,9 @@ Note:
 
 https://www.redhat.com/en/topics/api
 
+Note:
+* SUSE/RedHat were among the first to ship open source software on media and put a support phone number on the box.
+
 --
 ## Free Speech vs. Free Beer
 
@@ -110,7 +115,10 @@ https://www.redhat.com/en/topics/api
 >
 > -- Richard Stallman --
 
-**Open Source (OSI Definition)** is about **freedoms**, not price.
+In the **Open Source (OSI Definition)** it is about **freedoms**, not the price.
+
+Note:
+* How free is a free beer? Pretty limited to the current moment. No taking it with you, reselling it, or saving it for later.
 
 ---
 ## The OSI Definition (TL;DR)
@@ -124,10 +132,7 @@ For a label to be **genuine**, these conditions (among others) must be met:
 - Derived Works: You may modify it (Forks).
 <!-- .element: class="fragment" -->
 - No Discrimination: Against persons, groups, or fields of use (Field of Use).
-<!-- .element: class="fragment" -->
-
-Remember the last point ("Fields of Use"). That will be important in a moment.
-<!-- .element: class="fragment" -->
+<!-- .element: class="fragment warning-box"-->
 
 Note:
 * The Open Source Initiative (OSI) is the certification body for licenses. They wrote the Open Source Definition (OSD), which consists of 10 criteria.
@@ -156,11 +161,11 @@ Note:
 --
 ## Permissive (Generous)
 
-* Maximum Freedom: Allows almost anything – use, modification, and distribution (even in commercial/closed software).
-* Minimal Obligations: Usually only the copyright notice and license text must be retained.
+* Maximum freedom: Allows almost anything—use, modification, and distribution (also in commercial/closed software).
+* Minimal obligations: Usually only the copyright notice and license text must be retained.
 * No Copyleft: Changes do not have to be republished.
 
-> Examples: MIT, Apache 2.0, BSD.
+> Examples: MIT, BSD, Apache 2.0
 
 Note:
 
@@ -174,7 +179,7 @@ Note:
 
     This makes the patent trap impossible. Anyone publishing under Apache 2.0 cannot later sue users for patents contained in the software.
 
-    * The "Retaliation Clause" (Peace Clause)
+    2. The "Retaliation Clause" (Peace Clause)
     If you (the user) sue someone for patent infringement who uses this software, your Apache license terminates immediately.
 
     It deters patent trolls and prevents aggressive patent action against the community while using the software.
@@ -182,7 +187,7 @@ Note:
 --
 ## What is the Copyleft Effect?
 
-* Core Principle: Improvements must be made available to the general public ("Give and Take").
+* Core principle: Improvements must be made available to the general public ("Give and Take").
 * Scope: This applies to direct changes to the source code and to products in which the code is integrated.
 * Exception: Private or internal company use (without distribution) requires no obligation to share.
 * Variability: How strictly it applies depends on the respective license (Weak vs. Strong).
@@ -190,9 +195,9 @@ Note:
 --
 ## Weak Copyleft (Limited)
 
-* The Compromise: A bridge between strong copyleft and permissive licenses.
+* The compromise: A bridge between strong copyleft and permissive licenses.
 * File-based: Changes to *this specific* component/library must be disclosed.
-* Linking Allowed: Can often be used alongside proprietary software (e.g., as a dynamic library) without "infecting" the main program.
+* Linking allowed: Can often be used alongside proprietary software (e.g., as a dynamic library) without "infecting" the main program.
 
 > Examples: LGPL, Mozilla Public License (MPL).
 
@@ -212,8 +217,8 @@ Note:
 --
 ## Strong Copyleft
 
-* Viral Effect: If this software is used or integrated, the *entire* resulting work must be under the same license.
-* No Mixing: Combining with proprietary (closed) code is generally not possible without disclosing that code as well.
+* Viral effect: If this software is used or integrated, the *entire* resulting work must be under the same license.
+* No mixing: Combining with proprietary (closed) code is generally not possible without disclosing that code as well.
 * Focus: Protects software freedom most aggressively.
 
 > Examples: GPL v2/v3, AGPL.
@@ -225,16 +230,63 @@ Note:
 --
 ## License Jungle Overview
 
-<div class="table">
+<style>
+.license-box {
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 15px !important;
+  border-radius: 8px;
+  font-size: 0.8em !important;
+  display: flex;
+  align-items: center;
+}
+.license-icon {
+  font-size: 1.5em;
+  margin-right: 20px;
+  min-width: 50px;
+  text-align: center;
+}
+.license-content {
+  flex-grow: 1;
+}
+.l-green { background: rgba(46, 204, 113, 0.15); border-left: 8px solid #2ecc71; }
+.l-yellow { background: rgba(241, 196, 15, 0.15); border-left: 8px solid #f1c40f; }
+.l-orange { background: rgba(230, 126, 34, 0.15); border-left: 8px solid #e67e22; }
+.l-red { background: rgba(231, 76, 60, 0.15); border-left: 8px solid #e74c3c; }
+</style>
 
-| Permissive | Weak Copyleft | Strong Copyleft |
-| --- | --- | --- |
-| Do what you want.<br><br>MIT<br>Apache 2.0<br>BSD | Changes must be contributed back.<br><br>MPL<br>LGPL | Everything this touches must also be open.<br><br>GPL v2/v3<br>AGPL |
-
+<!-- GREEN: PERMISSIVE -->
+<div class="license-box l-green fragment fade-up">
+  <div class="license-icon">🟢</div>
+  <div class="license-content">
+    <strong>Permissive (Green Light)</strong><br>
+    "Do what you want." No restriction for proprietary use.<br>
+    <em>MIT, BSD, Apache 2.0</em>
+  </div>
 </div>
 
-Note:
-Permissive: Business-friendly. Copyleft: User-Freedom-friendly (viral). AGPL: Closes the cloud loophole.
+<!-- YELLOW: WEAK COPYLEFT -->
+<div class="license-box l-yellow fragment fade-up">
+  <div class="license-icon">🟡</div>
+  <div class="license-content">
+    <strong>Weak Copyleft (Shoulder Check)</strong><br>
+    "Keep files separate." Return changes to libs.<br>
+    <em>MPL, LGPL</em>
+  </div>
+</div>
+
+<!-- ORANGE: STRONG COPYLEFT -->
+<div class="license-box l-orange fragment fade-up">
+  <div class="license-icon">🟠</div>
+  <div class="license-content">
+    <strong>Strong Copyleft (Yield)</strong><br>
+    "Viral effect." Infects the entire project on contact.<br>
+    <em>GPL v2/v3, AGPL</em>
+  </div>
+</div>
+
+Better get through before the light turns **red**!
+<!-- .element: class="fragment warning-box"-->
 
 --
 ## How many OSI-approved Open Source licenses are there? ✋
@@ -265,16 +317,37 @@ There are 123 approved licenses as of 27.11.2025.
 ## The Bait-and-Switch
 ### (The Lure Trick)
 
-How do you catch developers?
+<!-- Flex container for 2 columns -->
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-top: 50px;">
 
-1. Build a cool database.
-<!-- .element: class="fragment" -->
-2. License it under Apache 2.0 (maximum adoption).
-<!-- .element: class="fragment" -->
-3. Wait until AWS/Google/Azure offer it as a service.
-<!-- .element: class="fragment" -->
-4. PANIC! "The cloud providers are stealing our revenue!"
-<!-- .element: class="fragment" -->
+  <!-- Left column: Text (55% width) -->
+  <div style="width: 55%; text-align: left;">
+    <p>How do you catch developers?</p>
+    <ol>
+      <li class="fragment" style="margin-bottom: 15px;">
+        Build a cool database.
+      </li>
+      <li class="fragment" style="margin-bottom: 15px;">
+        License it under <b>Apache 2.0</b> (maximum adoption).
+      </li>
+      <li class="fragment" style="margin-bottom: 15px;">
+        Wait until AWS/Google/Azure offer it as a service.
+      </li>
+      <!-- Last item red and bold for drama -->
+      <li class="fragment" style="color: #ff4444; font-weight: bold; margin-top: 25px;">
+        PANIC! "The cloud providers are stealing our revenue!"
+      </li>
+    </ol>
+  </div>
+
+  <!-- Right column: Image (40% width) -->
+  <div style="width: 40%;">
+    <img src="img/aws-surfing.webp" 
+         class="fragment" 
+         style="width: 70%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transform: rotate(2deg);">
+  </div>
+
+</div>
 
 ---
 ## The Timeline of "Betrayal"
@@ -295,7 +368,8 @@ How do you catch developers?
 
 Note:
 
-Why AGPL? -> Reason: To officially use the term "Open Source" again and regain trust.
+* Why AGPL? -> Reason: To officially use the term "Open Source" again and regain trust.
+* AGPL is OSI-approved but strong copyleft. Every change to the code must be disclosed—hosting becomes possible again.
 
 Mongo:
 * 2009 to Oct 15, 2018 AGPLv3
@@ -303,7 +377,7 @@ Mongo:
 
 CockroachDB:
 * 2015 - June 2019 Apache 2.0
-* June 2019 - BSL 1.1 (Business Source License) - Protection against cloud - "Anti-AWS paragraph". Can be used unless as a commercial SaaS service.
+* June 2019 - BSL 1.1 (Business Source License) - not Open Source per OSI - protection against cloud - "Anti-AWS paragraph". Usable except as commercial SaaS like AWS.
     * After 3 years, every version automatically falls back to open Apache 2.0.
     * Split into free version and Enterprise version with additional features.
 * Nov 18, 2024 - No free version anymore, only CockroachDB Software License (proprietary), no longer Open Source - Free to use for individual developers and companies under $10M USD annual revenue.
@@ -313,10 +387,10 @@ Elastic:
 * Jan 14, 2021 -> Dual license SSPL + Elastic License (No longer Open Source)
 * Aug 29, 2024 -> Third license with AGPL
 
-Redis:
+Redis: 
 * Mar 20, 2024 switch from BSD to SSPL and RSALv2 (Redis Source Available License).
-* Backlash, kicked out of distributions, return with AGPLv3 on May 1, 2025 - Now 3 licenses.
-* AGPL is OSI-recognized, but Strong Copyleft. Every change to the code must be disclosed. Hosting becomes possible again.
+* Backlash, kicked out of distributions, return with AGPLv3 on May 1, 2025 - Now 3 licenses
+* AGPL is OSI-recognized, but strong copyleft. Every change to the code must be disclosed. Hosting becomes possible again.
 
 --
 
@@ -333,40 +407,134 @@ Redis:
 
 Note:
 * The SSPL was created and introduced by MongoDB itself in 2018.
-* SSPL: The "poison pill" SSPL: Anyone offering the software as a service (SaaS) must not only disclose the software code itself but also the code for the entire management system around it (backups, monitoring, user management, hosting infrastructure).
+
 * GPL / AGPL: "Show me the application code." (AWS: "No problem, here's the unmodified DB.")
 * SSPL: "Show me the code of your entire cloud infrastructure." (AWS: "Never!")
+
+* SSPL: The "poison pill" SSPL: Anyone offering the software as a service (SaaS) must not only disclose the software code itself but also the code for the entire management system around it (backups, monitoring, user management, hosting infrastructure).
 * BSL: The newest, best version stays proprietary. The old version is gifted to the community (Open Source). The "change date" is crucial. Classic: You may use the software, but you may not offer it as a managed service (SaaS) that competes with the vendor.
+
+--
+
+## The License Jungle (including Red Light)
+<style>
+.license-box {
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 15px !important;
+  border-radius: 8px;
+  font-size: 0.8em !important;
+  display: flex;
+  align-items: center;
+}
+.license-icon {
+  font-size: 1.5em;
+  margin-right: 20px;
+  min-width: 50px;
+  text-align: center;
+}
+.license-content {
+  flex-grow: 1;
+}
+.l-green { background: rgba(46, 204, 113, 0.15); border-left: 8px solid #2ecc71; }
+.l-yellow { background: rgba(241, 196, 15, 0.15); border-left: 8px solid #f1c40f; }
+.l-orange { background: rgba(230, 126, 34, 0.15); border-left: 8px solid #e67e22; }
+.l-red { background: rgba(231, 76, 60, 0.15); border-left: 8px solid #e74c3c; }
+</style>
+
+<!-- GREEN: PERMISSIVE -->
+<div class="license-box l-green">
+  <div class="license-icon">🟢</div>
+  <div class="license-content">
+    <strong>Permissive (Free Ride)</strong><br>
+    "Do what you want." No restriction for proprietary use.<br>
+    <em>MIT, BSD, Apache 2.0</em>
+  </div>
+</div>
+
+<!-- YELLOW: WEAK COPYLEFT -->
+<div class="license-box l-yellow">
+  <div class="license-icon">🟡</div>
+  <div class="license-content">
+    <strong>Weak Copyleft (Shoulder Check)</strong><br>
+    "Keep files separate." Return changes to libs.<br>
+    <em>MPL, LGPL</em>
+  </div>
+</div>
+
+<!-- ORANGE: STRONG COPYLEFT -->
+<div class="license-box l-orange">
+  <div class="license-icon">🟠</div>
+  <div class="license-content">
+    <strong>Strong Copyleft (Yield)</strong><br>
+    "Viral effect." Infects the entire project on contact.<br>
+    <em>GPL v2/v3, AGPL</em>
+  </div>
+</div>
+
+<!-- RED: PROPRIETARY -->
+<div class="license-box l-red">
+  <div class="license-icon">🔴</div>
+  <div class="license-content">
+    <strong>Fake Open Source (Toll Booth)</strong><br>
+    "Source Available." Discriminates against certain uses (Cloud/SaaS).<br>
+    <em>SSPL, BSL, RSAL</em>
+  </div>
+</div>
 
 ---
 ## Why should you care?
 
-*"I'm not a cloud provider, so who cares?"*
+*"I'm not a cloud provider, so who cares?!"*
 
 ❌ Wrong.
-<!-- .element: class="fragment" -->
+<!-- .element: class="fragment warning-box" -->
 
-1. Vendor Lock-in: You are at the vendor's mercy. Price hikes? Bad luck.
-<!-- .element: class="fragment" -->
-2. License Compliance: Can I use this in my SaaS app? Do I need lawyers?
-<!-- .element: class="fragment" -->
-3. Death of the Community: External contributors stop. The ecosystem dies or splits.
-<!-- .element: class="fragment" -->
-> Redis lost its core developers to Valkey – development plummeted massively.
->  * 37.5% of contributors (9 of 24) stopped contributing to Redis after the fork
->  * Valkey grew from 18 to 49 contributors in 18 months
->  * Valkey averages 80 PRs/month in 2025 vs Redis's 42
-<!-- .element: class="fragment" -->
+<ol>
+  <li class="fragment" style="margin-bottom: 20px;">
+    <strong>Vendor Lock-in:</strong> You're at the vendor's mercy. Price hikes? Tough luck!
+  </li>
+  <li class="fragment" style="margin-bottom: 20px;">
+    <strong>License Compliance:</strong> Can I use this in my SaaS app? Do I need lawyers?
+  </li>
+  <li class="fragment">
+    <strong>Death of the Community:</strong> External contributors stop. The ecosystem dies or splits.
+  </li>
+</ol>
+
+<!-- New element: the red box -->
+  <div class="fragment" style="
+      margin-top: 30px;
+      border: 3px solid #ff4444;
+      background: rgba(255, 68, 68, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+  ">
+    <h3 style="color: #ff4444; margin: 0 0 10px 0;">Current Example: Redis vs. Valkey</h3>
+    <ul style="font-size: 0.8em; list-style-type: '⚠️  ';">
+      <li><b>37.5% of contributors</b> left Redis after the license change.</li>
+      <li>Valkey grew from 18 to <b>49 contributors</b> in 18 months.</li>
+      <li>2025 development pace:<br>
+          * Redis: ~42 PRs/month <br>
+          * Valkey: <b>~80 PRs/month</b> 🚀
+      </li>
+    </ul>
+  </div>
 
 ---
 # The Reaction: Forks!
 ## The community won't stand for it.
+<!-- .element: class="fragment" -->
 
-- **Elasticsearch** ➔ License Change ➔ **OpenSearch** (AWS/Community)
-- **Redis** ➔ License Change ➔ **Valkey** (Linux Foundation)
-- **MySQL** ➔ Oracle Acquisition ➔ **MariaDB / Percona Server for MySQL**
-- **MongoDB** ➔ License Change ➔ **Percona Server for MongoDB** (Enterprise Features and Backup Tools - SSPL remains active)
-
+- Elasticsearch ➔ License change ➔ OpenSearch (AWS/Community)
+<!-- .element: class="fragment" -->
+- Redis ➔ License change ➔ Valkey (Linux Foundation)
+<!-- .element: class="fragment" -->
+- MySQL ➔ Oracle acquisition ➔ MariaDB / Percona Server for MySQL
+<!-- .element: class="fragment" -->
+- MongoDB ➔ License change ➔ Percona Server for MongoDB (Enterprise features and backup tools - SSPL still active)
+<!-- .element: class="fragment" -->
 > Real Open Source always survives, but the name on the package changes.
 <!-- .element: class="fragment warning-box" -->
 
@@ -376,8 +544,11 @@ Note:
 **The Checklist:**
 
 1. Is the license OSI-approved? (opensource.org)
+
 2. Is there a "Commons Clause"? (🚩 Red Flag)
+
 3. Does it say "Non-Commercial Use Only" anywhere? (🚩 Red Flag)
+
 4. Who controls the project? A single company or a foundation (CNCF, Apache, Linux Foundation)?
 
 Note:
@@ -386,14 +557,27 @@ Note:
 * Non-Commercial Use Only: Real Open Source MUST allow commercial use. Licenses like CC-BY-NC or the new CockroachDB license (free only for small companies) discriminate against certain user groups ("Field of Use Restriction"). Total legal uncertainty—what counts as commercial, where does it start, where does it end?
 
 ---
-## Conclusion
+# Conclusion
 
-1. **Names are just smoke and mirrors.** Only the license counts.
+--
+
+1. **Names are just smoke and mirrors.**
+   > *Elastic called it "Free and Open", while AWS called it misleading and forked OpenSearch.*
+
+--
+
 2. **Source Available ≠ Open Source.**
-3. **Avoid Lock-in.** Bet on true community standards (Postgres, Valkey, Percona Server for MySQL/MariaDB).
+   > *The OSI officially confirmed: The SSPL (MongoDB) is NOT an Open Source license, no matter how often marketing repeats the term.*
+
+--
+
+3. **Avoid lock-in.**
+   > *HashiCorp (Terraform) showed in 2023 how fast a license can flip. Only true standards like **OpenTofu** (or **Valkey** for Redis) give you an exit.*
+
+--
 
 Stay critical. Stay free.
-<!-- .element: class="fragment warning-box" -->
+<!-- .element: class="warning-box" -->
 
 --
 ## Open Source Is Not Just Code: It's Integrity
