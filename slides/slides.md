@@ -32,13 +32,10 @@ Eine Reise durch Lizenzen, Marketing-Fallen und echte Freiheit.
 <p>Kai Wagner | <a href="mailto:kai.wagner@percona.com">kai.wagner@percona.com</a></p>
 
 ---
-## Wo finde ich die Präsentation?
 
-<img src="img/qr-code-to-presentation.png" style="background:none; border:none; box-shadow:none;">
+# Umfrage ✋
 
-Note:
-
-* Deutsch und Englisch je nach Browser Locale verfügbar
+## Wer kennt mich?
 
 --
 
@@ -53,7 +50,7 @@ Note:
 <img src="img/customer-base.png" style="background:none; border:none; box-shadow:none;">
 
 ---
-## Kurze Umfrage ✋
+## Umfrage ✋
 
 Wer von euch nutzt Open Source Datenbanken?
 
@@ -64,7 +61,9 @@ Achtung: Mindestens zwei der genannten sind **nicht mehr** bzw waren **nicht imm
 <!-- .element: class="fragment warning-box" -->
 
 ---
-## Wer glaubt zu wissen was Open Source ist? ✋
+# Umfrage ✋
+
+## Wer glaubt zu wissen was Open Source ist? 
 
 ---
 ## Was ist "Open Source"?
@@ -153,7 +152,9 @@ Note:
 * Die Open Source Initiative (OSI) ist der TÜV für Lizenzen. Sie haben die "Open Source Definition" (OSD) geschrieben, die aus 10 Kriterien besteht.
 
 --
-## Wie viele OSI anerkannte Open Source Lizenzen gibt es? ✋
+# Umfrage ✋
+
+## Wie viele OSI anerkannte Open Source Lizenzen gibt es? 
 
 - ... weniger als 10?
 <!-- .element: class="fragment" -->
@@ -172,9 +173,9 @@ Es sind 123 anerkannte Lizenzen, stand 27.11.2025
 
 Wir müssen kurz technisch werden. Es gibt zwei Hauptkategorien:
 
-* Permissive (permissiv) 
+* Permissive (erlaubend) 
 <!-- .element: class="fragment" -->
-* Non-permissive (nicht permissiv)
+* Non-permissive (beschränkend)
 <!-- .element: class="fragment" -->
 
 Eigentlich gibt es drei Hauptkategorien da sich non-permissive aufteilt in: 
@@ -189,7 +190,7 @@ Note:
 * nicht permissiv aka restriktiv oder beschränkend
 
 --
-## Permissive (Freigiebig)
+## Permissive (Erlaubend)
 
 * Maximaler Freiraum: Erlaubt fast alles – Nutzung, Änderung und Verbreitung (auch in kommerzieller/geschlossener Software).
 * Minimale Pflichten: Meist muss nur der Urheberrechtsvermerk (Copyright) und der Lizenztext beibehalten werden.
@@ -230,7 +231,7 @@ Note:
 * Variabilität: Wie streng der Effekt greift, hängt von der jeweiligen Lizenz ab (Weak vs. Strong).
 
 --
-## Weak Copyleft (Begrenzt)
+## Weak Copyleft (Leicht Begrenzt)
 
 * Der Kompromiss: Brücke zwischen strengem Copyleft und permissiven Lizenzen.
 * Dateibezogen: Änderungen an dieser spezifischen Komponente/Bibliothek müssen offengelegt werden.
@@ -252,7 +253,7 @@ Note:
 * Bei LGPL (Lesser GPL) alles nochmal spezieller: Dynamic linking erlaubt, Static linking schon schwieriger, da du die Objektdateien mitliefern müsstest, damit der Nutzer die Bibliothek neu linken kann. Bei LGPL muss gewährleistet sein, dass der Nutzer, die LGPL Datei problemlos austauschen kannst. z.B. eine .dll oder .so. Sobald das nicht mehr geht in einer .EXE oder Binary, hast du schon ein Problem, weil der Code "verschmolzen" wurde. Dadurch müsste ich dem Nutzer meine kompilierten Objekt-Dateien (.o/.obj) bereitstellen, was Reverse Engineering extrem vereinfacht und somit keine Firma möchte mit proprietärem Code. 
 
 --
-## Strong Copyleft (Streng)
+## Strong Copyleft (Streng Begrenzt)
 
 * Viraler Effekt: Wenn diese Software genutzt oder integriert wird, muss das gesamte entstehende Werk unter derselben Lizenz stehen.
 * Keine Mischung: Eine Kombination mit proprietärem (geschlossenem) Code ist in der Regel nicht möglich, ohne diesen ebenfalls offenzulegen.
@@ -341,12 +342,10 @@ Nochmal schnell weg bevor die Ampel auf **rot** wechselt!
 
 ---
 ## Das Lockvogelangebot
-### (Der Köder-Trick)
 
 <!-- Flex-Container für 2 Spalten -->
 <div style="display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-top: 50px;">
 
-  <!-- Linke Spalte: Text (55% Breite) -->
   <div style="width: 55%; text-align: left;">
     <p>Wie fängt man Entwickler?</p>
     <ol>
@@ -357,11 +356,12 @@ Nochmal schnell weg bevor die Ampel auf **rot** wechselt!
         Lizenziert sie unter <b>Apache 2.0</b> (maximale Adoption).
       </li>
       <li class="fragment" style="margin-bottom: 15px;">
-        Wartet, bis AWS/Google/Azure sie als Service anbieten.
+        <b>Die Falle:</b> Verlangt ein CLA (Copyright Transfer).<br>
+        <small><i>"Nur für die Rechtssicherheit, versprochen!" 😉</i></small>
       </li>
-      <!-- Der letzte Punkt rot und fett für Dramatik -->
       <li class="fragment" style="color: #ff4444; font-weight: bold; margin-top: 25px;">
-        PANIK! "Die Cloud Provider stehlen unseren Umsatz!"
+        PANIK! "Die Cloud Provider stehlen unseren Umsatz!" <br>
+        <small>(Gut, dass wir dank CLA alle Rechte haben, um die Lizenz zu ändern!)</small>
       </li>
     </ol>
   </div>
@@ -374,6 +374,10 @@ Nochmal schnell weg bevor die Ampel auf **rot** wechselt!
   </div>
 
 </div>
+
+Note:
+
+* Wenn die Community Rechte am Code behält, müsste der Hersteller jeden einzelnen Contributor fragen, ob er der Lizenzänderung zustimmt. Hat er aber dank CLA alle Rechte eingesammelt, kann er alleine entscheiden.
 
 ---
 ## Die Timeline des "Verrats"
@@ -630,5 +634,13 @@ Note:
 ---
 # Fragen?
 
-Vielen Dank!
+#### Wo finde ich die Präsentation?
+
+<img src="img/qr-code-to-presentation.png" style="background:none; border:none; box-shadow:none;">
+
+# Vielen Dank!
+
+Note:
+
+* Deutsch und Englisch je nach Browser Locale verfügbar
 
