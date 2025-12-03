@@ -55,7 +55,7 @@ Note:
 ---
 ## Kurze Umfrage ✋
 
-Wer von euch nutzt Open Source Datenbanken in Produktion?
+Wer von euch nutzt Open Source Datenbanken?
 
 - ... MySQL? PostgreSQL? MongoDB? Redis?
 <!-- .element: class="fragment" -->
@@ -71,7 +71,7 @@ Achtung: Mindestens zwei der genannten sind **nicht mehr** bzw waren **nicht imm
 
 Wenn man 5 Leute fragt, bekommt man 6 Antworten.
 
-1. "Kostet nichts." (Falsch)
+1. "Kostet nichts." (Falsch aka "Jein")
 <!-- .element: class="fragment" -->
 2. "Ich kann den Code lesen." (Unzureichend)
 <!-- .element: class="fragment" -->
@@ -94,6 +94,7 @@ Note:
 <img src="img/open-source-services-market-size-by-service-2024-2032.png" style="background:none; border:none; box-shadow:none; width:1300px;">
 
 Note:
+* 2025 ca. 38 Milliarden
 * Der Markt soll bis 2032 auf über 118 Milliarden anwachsen. 
 
 --
@@ -109,6 +110,9 @@ Note:
 ## Community und Freiheit
 
 --
+
+## Community
+
 "Collaborating with a community is about more than developing code. Collaboration is about the freedom to ask questions and offer improvements - that’s the open source way and the power of the open organization."
 
 https://www.redhat.com/en/topics/api
@@ -133,20 +137,35 @@ Note:
 
 Damit ein Etikettenlabel **echt** ist, müssen (unter anderem) diese Bedingungen erfüllt sein:
 
-- Free Redistribution: Du darfst es weitergeben/verkaufen.
+> **Freie Weitergabe:** Ja, man darf es kopieren und verkaufen. Keine Einschränkung.
 <!-- .element: class="fragment" -->
-- Source Code: Muss enthalten sein.
+> **Offener Quellcode:** Keine Blackboxen. Alles muss offen liegen.
 <!-- .element: class="fragment" -->
-- Derived Works: Du darfst es verändern (Forks).
+> **Forks erlaubt:** Gefällt dir die Richtung nicht? Dann darfst du es selbst besser machen.
 <!-- .element: class="fragment" -->
-- No Discrimination: Gegen Personen, Gruppen oder Einsatzzwecke (Field of Use).
+> **Keine Diskriminierung:** Egal ob Militär, Atomkraft oder Cloud-Konkurrenz – jeder darf es nutzen.
 <!-- .element: class="fragment" -->
 
-Merkt euch den letzten Punkt ("Einsatzzwecke"). Der wird gleich wichtig.
+Merkt euch den letzten Punkt ("Keine Diskriminierung"). Der wird gleich wichtig.
 <!-- .element: class="fragment warning-box"-->
 
 Note:
 * Die Open Source Initiative (OSI) ist der TÜV für Lizenzen. Sie haben die "Open Source Definition" (OSD) geschrieben, die aus 10 Kriterien besteht.
+
+--
+## Wie viele OSI anerkannte Open Source Lizenzen gibt es? ✋
+
+- ... weniger als 10?
+<!-- .element: class="fragment" -->
+- ... zwischen 10 und 50?
+<!-- .element: class="fragment" -->
+- ... zwischen 50 und 86?
+<!-- .element: class="fragment" -->
+- ... über 122?
+<!-- .element: class="fragment" -->
+
+Note:
+Es sind 123 anerkannte Lizenzen, stand 27.11.2025
 
 ---
 ## Der Lizenz-Dschungel
@@ -179,6 +198,11 @@ Note:
 > Beispiele: MIT, BSD, Apache 2.0
 
 Note:
+
+* "Stell dir vor, ich schenke dir eine riesige Kiste voller Legosteine. Ich sage dazu: 'Mach damit, was du willst.'
+    - Du baust ein Auto daraus? Super.
+    - Du verkaufst das Auto? Viel Erfolg.
+    - Der Clou: Du darfst die Steine mit Superkleber zusammenkleben (Closed Source), sodass niemand mehr sieht, wie du es gebaut hast. Du musst mir nichts zurückgeben, außer einem kleinen Zettel im Handschuhfach, aufdem steht: 'Steine waren ursprünglich von Kai'."
 
 * MIT: Massachusetts Institute of Technology
 * BSD: University of California, Berkeley - Berkeley Software Distribution
@@ -237,8 +261,12 @@ Note:
 > Beispiele: GPL v2/v3, AGPL.
 
 Note:
-* GPL: Auslöser der "alles muss offengelegt werden", erst bei Distribution, also der Weitergabe als EXE, ISO, Docker-Image etc., somit ein SaaS-Loophole, da keine Weitergabe
-* AGPL: Schließt das SaaS-Loophole, da die Pflicht greift bei "Interaktion über ein Netzwerk" -> Nach dem Zugriff, muss der Cloud-Provider den Source Code offenlegen.
+
+* "Jetzt wird es gefährlich. GPL-Steine sind wie magische, leuchtende Steine.
+    - Die Regel lautet: Ein einziger dieser Steine darf nur in einem Haus verbaut werden, das komplett aus durchsichtigen Glas-Bausteinen besteht.
+    - Sobald du einen einzigen GPL-Stein in dein Fundament legst, 'infiziert' er das ganze Gebäude.
+    - Du kannst dein Haus nicht mehr zukleben oder geheim halten. Du musst der Welt den Bauplan für das gesamte Haus zeigen."
+    - Zusatz für AGPL (Cloud-Lücke): "Bei der normalen GPL musst du den Bauplan nur zeigen, wenn du das Haus verkaufst. Bei der AGPL musst du den Bauplan schon zeigen, wenn du Leute nur durch ein Fernrohr (Internet) dein Haus anschauen lässt."
 
 --
 ## Lizenz-Dschungel Übersicht
@@ -300,21 +328,6 @@ Note:
 
 Nochmal schnell weg bevor die Ampel auf **rot** wechselt!
 <!-- .element: class="fragment warning-box"-->
-
---
-## Wie viele OSI anerkannte Open Source Lizenzen gibt es? ✋
-
-- ... weniger als 10?
-<!-- .element: class="fragment" -->
-- ... zwischen 10 und 50?
-<!-- .element: class="fragment" -->
-- ... zwischen 50 und 86?
-<!-- .element: class="fragment" -->
-- ... über 122?
-<!-- .element: class="fragment" -->
-
-Note:
-Es sind 123 anerkannte Lizenzen, stand 27.11.2025
 
 ---
 ## Ihr erinnert euch noch an den Open Source Markt?
@@ -426,6 +439,7 @@ Note:
 
 * SSPL: Der "Giftköder" SSPL: Wer die Software als Service anbietet (SaaS), muss nicht nur den Code der Software selbst offenlegen, sondern auch den Code für das gesamte Management-System drumherum (Backups, Monitoring, User-Verwaltung, Hosting-Infrastruktur).
 * BSL: Die neueste, geilste Version gehört uns (proprietär). Die alte Version schenken wir der Community (Open Source). "Change Date" entscheidend. Klassiker: Du darfst die Software nutzen, aber du darfst sie nicht als Managed Service (SaaS) anbieten, der mit uns konkurriert.
+* EDas Museumsstück (Nur gucken, nicht anfassen) aka GPL/AGPL vs sind nicht deine Steine. Du hast sie nur geliehen bekommen – mit strengen Auflagen, wem du sie zeigen darfst.
 
 --
 
@@ -576,35 +590,25 @@ Note:
 --
 
 1. **Namen sind Schall und Rauch.**
-   > *Elastic nannte es 'Free and Open', während AWS es als irreführend entlarvte und OpenSearch forkte.*
-
---
+   > Nur weil Open Source drauf steht, muss das noch lange nicht stimmen.
 
 2. **Source Available ≠ Open Source.**
    > *Die OSI hat offiziell bestätigt: Die SSPL (MongoDB) ist KEINE Open Source Lizenz, egal wie oft der Begriff im Marketing fällt.*
 
---
-
 3. **Vermeidet Lock-in.**
-   > *HashiCorp (Terraform) zeigte 2023, wie schnell eine Lizenz kippen kann. Nur echte Standards wie **OpenTofu** (oder **Valkey** bei Redis) bieten einen Ausweg.*
+   > *HashiCorp (Terraform) zeigte 2023, wie schnell eine Lizenz kippen kann. Überlegt vorher, welche Software ihr einsetzt.*
+
+Bleibt kritisch. Bleibt frei.
+<!-- .element: class="fragment warning-box"-->
 
 Note:
 
 * Akt 1: Der Standard (Bis August 2023)
     - Terraform war der absolute Industriestandard für "Infrastructure as Code" (IaC).
-    - Lizenz: MPL 2.0 (Weak Copyleft / Open Source).
-    - Die Situation: Ein riesiges Ökosystem entstand. Andere Firmen (wie Spacelift, Scalr, Env0) bauten Produkte um Terraform herum, um es besser nutzbar zu machen. HashiCorp fand das toll, solange Terraform wuchs.
-
-* Akt 2: Der "Rug Pull" (10. August 2023)
-    - HashiCorp änderte über Nacht die Lizenz zu BSL v1.1 (Business Source License).
-    - Das Ziel: Sie wollten die Konkurrenten (Spacelift & Co.) töten. Die Lizenz besagt: "Du darfst Terraform nutzen, außer du baust ein Produkt, das mit HashiCorp konkurriert."
-    - Das Problem für alle: Die Definition von "Konkurrenz" ist schwammig. Anwälte in großen Firmen (Allianz, Daimler, Banken) schlugen Alarm. Niemand wusste, ob interne Plattformen plötzlich lizenzpflichtig werden.
+    - Riesiges Ökosystem
+    - Lizenz: MPL 2.0 (Weak Copyleft / Open Source) zu BSL gewechselt (Keine Produkte mehr, die mit Terraformi/Hashicorp konkurieren"
+    - Definition von Konkurenz ist schwammig. 
     - Der Vertrauensbruch: HashiCorp hatte jahrelang versichert, Terraform bleibe Open Source.
-
---
-
-Bleibt kritisch. Bleibt frei.
-<!-- .element: class="warning-box" -->
 
 --
 ## Open Source Is Not Just Code: It's Integrity
