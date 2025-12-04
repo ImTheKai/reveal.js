@@ -591,6 +591,20 @@ Note:
 * Commons Clause: Der Trick: Der Hersteller nimmt eine echte Open-Source-Lizenz (z.B. Apache 2.0) und klebt am Ende einen Zusatztext dran: "Das hier ist Apache 2.0, ABER du darfst den Code nicht verkaufen."
 * Non-Commercial Use Only: Echtes Open Source MUSS kommerzielle Nutzung erlauben. Lizenzen wie die CC-BY-NC (Creative Commons Non-Commercial) oder die neue Lizenz von CockroachDB (kostenlos nur für kleine Firmen) diskriminieren bestimmte Nutzergruppen ("Field of Use Restriction"). Komplette Rechtsunsicherheit - was ist kommerziell, wo fängt es an, wo hört es auf?
 
+--
+
+<section>
+  <h3>Der ultimative Datenbank-Check</h3>
+  
+  <iframe 
+    data-src="https://howfuckedismydatabase.com/" 
+    width="100%" 
+    height="800px" 
+    style="border: 4px solid #333; border-radius: 10px; background: white;">
+  </iframe>
+  
+</section>
+
 ---
 # Fazit
 
