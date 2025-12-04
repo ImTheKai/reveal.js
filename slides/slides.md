@@ -33,9 +33,9 @@ Eine Reise durch Lizenzen, Marketing-Fallen und echte Freiheit.
 
 ---
 
-# Umfrage ✋
+## Umfrage ✋
 
-## Wer kennt mich?
+> Wer kennt mich?
 
 --
 
@@ -52,7 +52,7 @@ Eine Reise durch Lizenzen, Marketing-Fallen und echte Freiheit.
 ---
 ## Umfrage ✋
 
-Wer von euch nutzt Open Source Datenbanken?
+> Wer von euch nutzt Open Source Datenbanken?
 
 - ... MySQL? PostgreSQL? MongoDB? Redis?
 <!-- .element: class="fragment" -->
@@ -61,9 +61,9 @@ Achtung: Mindestens zwei der genannten sind **nicht mehr** bzw waren **nicht imm
 <!-- .element: class="fragment warning-box" -->
 
 ---
-# Umfrage ✋
+## Umfrage ✋
 
-## Wer glaubt zu wissen was Open Source ist? 
+> Wer glaubt zu wissen was Open Source ist? 
 
 ---
 ## Was ist "Open Source"?
@@ -152,9 +152,9 @@ Note:
 * Die Open Source Initiative (OSI) ist der TÜV für Lizenzen. Sie haben die "Open Source Definition" (OSD) geschrieben, die aus 10 Kriterien besteht.
 
 --
-# Umfrage ✋
+## Umfrage ✋
 
-## Wie viele OSI anerkannte Open Source Lizenzen gibt es? 
+> Wie viele OSI anerkannte Open Source Lizenzen gibt es? 
 
 - ... weniger als 10?
 <!-- .element: class="fragment" -->
@@ -164,6 +164,9 @@ Note:
 <!-- .element: class="fragment" -->
 - ... über 122?
 <!-- .element: class="fragment" -->
+
+Es sind 123 Lizenzen!
+<!-- .element: class="fragment warning-box"-->
 
 Note:
 Es sind 123 anerkannte Lizenzen, stand 27.11.2025
@@ -558,8 +561,8 @@ Note:
 </section>
 
 ---
-# Die Reaktion: Forks!
-## Die Community lässt sich das nicht gefallen.
+## Die Reaktion: Forks!
+> Die Community lässt sich das nicht gefallen.
 <!-- .element: class="fragment" -->
 
 - Elasticsearch ➔ Lizenzänderung ➔ OpenSearch (AWS/Community)
