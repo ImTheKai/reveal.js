@@ -32,13 +32,9 @@ A journey through licenses, marketing traps, and real freedom.
 <p>Kai Wagner | <a href="mailto:kai.wagner@percona.com">kai.wagner@percona.com</a></p>
 
 ---
-## Where can I find the presentation?
+# Poll ✋
 
-<img src="img/qr-code-to-presentation.png" style="background:none; border:none; box-shadow:none;">
-
-Note:
-
-* German and English available depending on browser locale
+## Who knows me?
 
 --
 
@@ -53,9 +49,9 @@ Note:
 <img src="img/customer-base.png" style="background:none; border:none; box-shadow:none;">
 
 ---
-## Quick Poll ✋
+# Poll ✋
 
-Who among you uses Open Source databases in production?
+Who among you uses Open Source databases?
 
 - ... MySQL? PostgreSQL? MongoDB? Redis?
 <!-- .element: class="fragment" -->
@@ -64,6 +60,8 @@ Warning: At least two of those mentioned are **no longer** or were **not always*
 <!-- .element: class="fragment warning-box" -->
 
 ---
+# Poll ✋
+
 ## Who thinks they know what Open Source is? ✋
 
 ---
@@ -94,6 +92,7 @@ Note:
 <img src="img/open-source-services-market-size-by-service-2024-2032.png" style="background:none; border:none; box-shadow:none; width:1300px;">
 
 Note:
+* 2025 is around 38 billion.
 * The market is expected to grow to over 118 billion by 2032.
 
 --
@@ -109,6 +108,8 @@ Note:
 ## Community and Freedom
 
 --
+## Community
+
 "Collaborating with a community is about more than developing code. Collaboration is about the freedom to ask questions and offer improvements - that’s the open source way and the power of the open organization."
 
 https://www.redhat.com/en/topics/api
@@ -147,6 +148,23 @@ Remember the last point ("Fields of use"). It will be important in a moment.
 
 Note:
 * The Open Source Initiative (OSI) is the TUV-style certifier for licenses. They wrote the "Open Source Definition" (OSD), which consists of 10 criteria.
+
+--
+# Poll ✋
+
+## How many OSI-approved Open Source licenses are there? ✋
+
+- ... fewer than 10?
+<!-- .element: class="fragment" -->
+- ... between 10 and 50?
+<!-- .element: class="fragment" -->
+- ... between 50 and 86?
+<!-- .element: class="fragment" -->
+- ... more than 122?
+<!-- .element: class="fragment" -->
+
+Note:
+There are 123 approved licenses as of 27.11.2025.
 
 ---
 ## The License Jungle
@@ -299,21 +317,6 @@ Note:
 Better get through before the light turns **red**!
 <!-- .element: class="fragment warning-box"-->
 
---
-## How many OSI-approved Open Source licenses are there? ✋
-
-- ... fewer than 10?
-<!-- .element: class="fragment" -->
-- ... between 10 and 50?
-<!-- .element: class="fragment" -->
-- ... between 50 and 86?
-<!-- .element: class="fragment" -->
-- ... more than 122?
-<!-- .element: class="fragment" -->
-
-Note:
-There are 123 approved licenses as of 27.11.2025.
-
 ---
 ## Do you remember the Open Source market?
 
@@ -342,11 +345,13 @@ There are 123 approved licenses as of 27.11.2025.
         License it under <b>Apache 2.0</b> (maximum adoption).
       </li>
       <li class="fragment" style="margin-bottom: 15px;">
-        Wait until AWS/Google/Azure offer it as a service.
+        <b>The trap:</b> Demand a CLA (copyright transfer).<br>
+        <small><i>"Just for legal certainty, promise!" 😉</i></small>
       </li>
       <!-- Last item red and bold for drama -->
       <li class="fragment" style="color: #ff4444; font-weight: bold; margin-top: 25px;">
-        PANIC! "The cloud providers are stealing our revenue!"
+        PANIC! "The cloud providers are stealing our revenue!" <br>
+        <small>(Good thing we grabbed all rights via the CLA, so we can change the license!)</small>
       </li>
     </ol>
   </div>
@@ -359,6 +364,10 @@ There are 123 approved licenses as of 27.11.2025.
   </div>
 
 </div>
+
+Note:
+
+* If the community keeps rights to the code, the vendor would have to ask every contributor for approval to change the license. With a CLA collected, they can decide alone.
 
 ---
 ## The Timeline of "Betrayal"
@@ -424,6 +433,7 @@ Note:
 
 * SSPL: The "poison pill" SSPL: Anyone offering the software as a service (SaaS) must not only disclose the software code itself but also the code for the entire management system around it (backups, monitoring, user management, hosting infrastructure).
 * BSL: The newest, best version stays proprietary. The old version is gifted to the community (Open Source). The "change date" is crucial. Classic: You may use the software, but you may not offer it as a managed service (SaaS) that competes with the vendor.
+* The museum piece (look, don't touch): GPL/AGPL aren't your bricks. You only borrowed them—with strict rules on who you may show them to.
 
 --
 
@@ -574,7 +584,7 @@ Note:
 --
 
 1. **Names are just smoke and mirrors.**
-   > *Elastic called it "Free and Open", while AWS called it misleading and forked OpenSearch.*
+   > Just because it says Open Source on the label doesn't mean it's true.
 
 --
 
@@ -584,19 +594,15 @@ Note:
 --
 
 3. **Avoid lock-in.**
-   > *HashiCorp (Terraform) showed in 2023 how fast a license can flip. Only true standards like **OpenTofu** (or **Valkey** for Redis) give you an exit.*
+   > *HashiCorp (Terraform) showed in 2023 how fast a license can flip. Think ahead about which software you choose.*
 
 Note:
 
 * Act 1: The Standard (until August 2023)
     - Terraform was the absolute industry standard for "Infrastructure as Code" (IaC).
-    - License: MPL 2.0 (Weak Copyleft / Open Source).
-    - The situation: A huge ecosystem emerged. Other companies (like Spacelift, Scalr, Env0) built products around Terraform to make it more usable. HashiCorp loved this as long as Terraform was growing.
-
-* Act 2: The "Rug Pull" (August 10, 2023)
-    - HashiCorp changed the license overnight to BSL v1.1 (Business Source License).
-    - The goal: Kill the competitors (Spacelift & Co.). The license says: "You may use Terraform, unless you build a product that competes with HashiCorp."
-    - The problem for everyone: The definition of "competition" is fuzzy. Lawyers in large companies (Allianz, Daimler, banks) sounded the alarm. No one knew whether internal platforms would suddenly become license-liable.
+    - Huge ecosystem.
+    - License: MPL 2.0 (Weak Copyleft / Open Source) switched to BSL (no products that compete with Terraform/HashiCorp).
+    - The definition of competition is fuzzy.
     - The breach of trust: HashiCorp had assured for years that Terraform would remain Open Source.
 
 --
@@ -624,4 +630,12 @@ Note:
 ---
 # Questions?
 
-Thank you!
+#### Where can I find the presentation?
+
+<img src="img/qr-code-to-presentation.png" style="background:none; border:none; box-shadow:none;">
+
+# Thank you!
+
+Note:
+
+* German and English available depending on browser locale
