@@ -359,6 +359,9 @@ Nochmal schnell weg bevor die Ampel auf **rot** wechselt!
         <b>Die Falle:</b> Verlangt ein CLA (Copyright Transfer).<br>
         <small><i>"Nur für die Rechtssicherheit, versprochen!" 😉</i></small>
       </li>
+      <li class="fragment" style="margin-bottom: 15px;">
+         Wartet, bis AWS/Google/Azure sie als Service anbieten.
+      </li>
       <li class="fragment" style="color: #ff4444; font-weight: bold; margin-top: 25px;">
         PANIK! "Die Cloud Provider stehlen unseren Umsatz!" <br>
         <small>(Gut, dass wir dank CLA alle Rechte haben, um die Lizenz zu ändern!)</small>
@@ -394,7 +397,7 @@ Note:
 
 </div>
 
-*Hinweis: Elastic, CockroachDB und Redis ruderten teilweise zurück*
+*Hinweis: Elastic und Redis ruderten teilweise zurück*
 
 Note:
 
