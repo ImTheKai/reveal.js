@@ -53,3 +53,9 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
     z-index: 1000;
     pointer-events: none;
 }
+
+@media print {
+    .reveal-viewport::after {
+        display: none;
+    }
+}

@@ -366,9 +366,10 @@ Nochmal schnell weg bevor die Ampel auf **rot** wechselt!
 ---
 ## Ihr erinnert euch noch an den Open Source Markt?
 
-<section>
-<img width="50%" height="100%" src="img/db-engine-db-trend-numbers.png" style="background:none; border:none; box-shadow:none;"><img width="50%" height="100%" src="img/open-source-services-market-size-by-service-2024-2032.png" style="background:none; border:none; box-shadow:none;">
-</section>
+<div style="display:flex; gap:30px; align-items:center; justify-content:space-between;">
+  <img width="50%" height="100%" src="img/db-engine-db-trend-numbers.png" style="background:none; border:none; box-shadow:none;">
+  <img width="50%" height="100%" src="img/open-source-services-market-size-by-service-2024-2032.png" style="background:none; border:none; box-shadow:none;">
+</div>
 
 --
 ## Aber dieser absehbare Erfolg weckte Begehrlichkeiten.
@@ -701,4 +702,3 @@ Note:
 Note:
 
 * Deutsch und Englisch je nach Browser Locale verfügbar
-

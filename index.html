@@ -25,11 +25,11 @@
 		    </div>
 		</div>
 		<script src="dist/reveal.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
 		<script>
 			// --- Configuration ---
 		    const germanSlides = "slides/slides.md";
 		    const englishSlides = "slides/slides-eng.md";
+		    const isPrintingToPdf = window.location.search.includes("print-pdf");
 
 		    // 1. Check URL parameters (e.g., ?lang=en or ?lang=de)
 		    const urlParams = new URLSearchParams(window.location.search);
@@ -52,8 +52,12 @@
 		    // 5. Inject the filename
 		    console.log("Detected language:", langToCheck, "| Loading:", targetFile);
 		    document.querySelector("section[data-markdown]").setAttribute("data-markdown", targetFile);
+
+		    // PDF export should keep every slide to one page and show full fragments at once
+		    const printConfig = isPrintingToPdf
+		      ? { pdfSeparateFragments: false, pdfMaxPagesPerSlide: 1 }
+		      : {};
 		</script>
-		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
@@ -68,6 +72,7 @@
 				width: 1920,
 				height: 1080,
 				maxScale: 1,
+				...printConfig,
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
