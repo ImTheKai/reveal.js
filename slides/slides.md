@@ -31,11 +31,19 @@ Eine Reise durch Lizenzen, Marketing-Fallen und echte Freiheit.
 
 <p>Kai Wagner | <a href="mailto:kai.wagner@percona.com">kai.wagner@percona.com</a></p>
 
+Note:
+
+- Heute befassen wir uns mit dem Thema 'Etikettenschwindel' und der Frage: Wie Open Source ist deine Datenbank wirklich?
+
 ---
 
 ## Umfrage ✋
 
 > Wer kennt mich?
+
+Note:
+
+- Fangen wir mit einer kleinen Umfrage zum Warmwerden an. Einfach mal die Hand heben: Wer weiß, wer ich bin?
 
 --
 
@@ -181,13 +189,6 @@ Wir müssen kurz technisch werden. Es gibt zwei Hauptkategorien:
 * Non-permissive (beschränkend)
 <!-- .element: class="fragment" -->
 
-Eigentlich gibt es drei Hauptkategorien da sich non-permissive aufteilt in: 
-<!-- .element: class="fragment" -->
-* Weak Copyleft
-<!-- .element: class="fragment" -->
-* Strong Copyleft
-<!-- .element: class="fragment" -->
-
 Note:
 * permissiv aka freizügig oder erlaubend
 * nicht permissiv aka restriktiv oder beschränkend
@@ -212,18 +213,36 @@ Note:
 * BSD: University of California, Berkeley - Berkeley Software Distribution
 * Apache 2.0: Besonderheit - Patent Klausel - Schützt Nutzer vor dem verklagt werden durch den Urheber vor Patentverletzungen
 
-    * Apache 2.0 - Die Lizenz sagt ausdrücklich:
+### Die Analogie: "Die Kiste mit dem Schutzschild"
+(Unterschied zu MIT: Rechtssicherheit)
 
-    "Wenn ich dir diesen Code gebe, gebe ich dir automatisch auch eine Lizenz für alle meine Patente, die nötig sind, um diesen Code auszuführen."
+"Stellt euch vor, ich schenke euch wieder die Kiste Lego (wie bei MIT). Aber bei der MIT gibt es ein Restrisiko: Vielleicht habe ich auf die **Form** der Noppen ein Patent. Du baust dein Auto, wirst reich, und dann komme ich und verklage dich wegen Patentverletzung.
 
-    Damit ist die oben genannte Falle unmöglich. Wer Software unter Apache 2.0 veröffentlicht, kann die Nutzer später nicht wegen Patenten verklagen, die in dieser Software stecken.
+**Bei der Apache-Kiste liegt deshalb ein Vertrag bei:**
+1.  **Der Schutzbrief (Patent Grant):** 'Ich verspreche, dich nie wegen Patenten an diesen Steinen zu verklagen.' (Du bist sicher).
+2.  **Der Selbstzerstörungsknopf (Retaliation Clause):** 'Wenn DU aber jemanden wegen Patenten an diesen Steinen verklagst, verlierst du sofort das Recht, meine Steine zu nutzen.'
 
-    2. Die "Retaliation Clause" (Die Vergeltungs-Klausel / Friedenspflicht)
-    Das ist der genialste Teil für Unternehmen. Die Klausel besagt:
+Das ist der **Waffenstillstand**, den Großkonzerne brauchen, um sicher zusammenzuarbeiten."
 
-    "Wenn du (der Nutzer) jemanden wegen Patentverletzung verklagst, der diese Software nutzt, dann erlischt deine Apache-Lizenz sofort."
+--
 
-    Was das bedeutet: Es ist eine "Waffe", die Patent-Trolle abschreckt. Wenn eine Firma Software unter Apache 2.0 nutzt, darf sie nicht aggressiv gegen die Community oder andere Nutzer wegen Patenten vorgehen, sonst verliert sie selbst das Recht, die Software zu nutzen.
+## Der Lizenz-Dschungel
+
+Wir müssen kurz technisch werden. Es gibt zwei Hauptkategorien:
+
+* Permissive (erlaubend) 
+* Non-permissive (beschränkend)
+
+Eigentlich gibt es drei Hauptkategorien da sich non-permissive aufteilt in: 
+<!-- .element: class="fragment" -->
+* Weak Copyleft
+<!-- .element: class="fragment" -->
+* Strong Copyleft
+<!-- .element: class="fragment" -->
+
+Note:
+* permissiv aka freizügig oder erlaubend
+* nicht permissiv aka restriktiv oder beschränkend
 
 --
 ## Was ist der Copyleft-Effekt?
@@ -243,17 +262,21 @@ Note:
 > Beispiele: LGPL, Mozilla Public License (MPL).
 
 Note:
+### 1. MPL (Das Lego-Prinzip / Datei-Level)
 * Generell zu Weak Copyleft aber speziell MPL: Das "Lego-Prinzip"
     * Stell dir vor, du baust ein Raumschiff aus Lego.
     * Dein Raumschiff ist deine proprietäre Software (geheim).
     * Der Standard-Motor, den du einbaust, ist eine Weak Copyleft Bibliothek (z. B. MPL).
     * Das Prinzip: Solange du den Motor nur benutzt (einbaust), darf dein Raumschiff geheim bleiben. Der Motor bleibt ein eigenständiges Bauteil.
     * Die Pflicht (Der Copyleft-Teil): Wenn du den Motor aufschraubst und verbesserst (z. B. schneller machst), musst du den Bauplan für den verbesserten Motor veröffentlichen. Aber der Bauplan für den Rest des Raumschiffs bleibt dein Geheimnis.
-* Fun Fact zu LGPL: Ursprünglich stand die Abkürzung für "Library General Public License".
-    * Die Free Software Foundation (FSF) hat sie jedoch ganz bewusst umbenannt, um eine politische Botschaft zu senden:
-    * Library (Alt): Der Name klang zu "empfehlend" – als wäre dies die Standard-Lizenz für alle Bibliotheken.
-    * Lesser (Neu): Das Wort "Lesser" (Geringer) soll ausdrücken, dass diese Lizenz die Freiheit der Nutzer weniger schützt als die volle GPL.
-* Bei LGPL (Lesser GPL) alles nochmal spezieller: Dynamic linking erlaubt, Static linking schon schwieriger, da du die Objektdateien mitliefern müsstest, damit der Nutzer die Bibliothek neu linken kann. Bei LGPL muss gewährleistet sein, dass der Nutzer, die LGPL Datei problemlos austauschen kannst. z.B. eine .dll oder .so. Sobald das nicht mehr geht in einer .EXE oder Binary, hast du schon ein Problem, weil der Code "verschmolzen" wurde. Dadurch müsste ich dem Nutzer meine kompilierten Objekt-Dateien (.o/.obj) bereitstellen, was Reverse Engineering extrem vereinfacht und somit keine Firma möchte mit proprietärem Code. 
+
+### 2. LGPL (Der Austausch-Zwang / Library-Level)
+Hier wird es komplizierter. Die LGPL will nicht nur den Code, sie will die **Freiheit des Nutzers, den Motor auszutauschen**.
+
+* **Szenario A (Erlaubt - Dynamisch):** Du baust den Motor so ein, dass man ihn einfach herausklicken und durch einen neueren (z.B. schnelleren) Motor ersetzen kann. (In der IT: Dynamic Linking / .dll / .so). -> Alles super.
+* **Szenario B (Problematisch - Statisch):** Du verklebst den Motor fest mit dem Rumpf (Static Linking), sodass man ihn nicht mehr tauschen kann, ohne das Schiff zu zerstören.
+    * **Die Folge:** Das ist unter LGPL verboten, *außer* du lieferst dem Nutzer ein "Lösungsmittel" und die Einzelteile (Objekt-Dateien), damit er das Schiff selbst neu zusammenkleben kann.
+    * **Fazit:** LGPL ist in modernen Sprachen (Go, Rust), die gerne "alles verkleben", extrem nervig. MPL ist da entspannter.
 
 --
 ## Strong Copyleft (Streng Begrenzt)
@@ -266,11 +289,18 @@ Note:
 
 Note:
 
-* "Jetzt wird es gefährlich. GPL-Steine sind wie magische, leuchtende Steine.
-    - Die Regel lautet: Ein einziger dieser Steine darf nur in einem Haus verbaut werden, das komplett aus durchsichtigen Glas-Bausteinen besteht.
-    - Sobald du einen einzigen GPL-Stein in dein Fundament legst, 'infiziert' er das ganze Gebäude.
-    - Du kannst dein Haus nicht mehr zukleben oder geheim halten. Du musst der Welt den Bauplan für das gesamte Haus zeigen."
-    - Zusatz für AGPL (Cloud-Lücke): "Bei der normalen GPL musst du den Bauplan nur zeigen, wenn du das Haus verkaufst. Bei der AGPL musst du den Bauplan schon zeigen, wenn du Leute nur durch ein Fernrohr (Internet) dein Haus anschauen lässt."
+**1. GPL (Der virale Reaktor)**
+Stell dir vor, du verbaust einen **GPL-Reaktor** in dein Raumschiff.
+Dieser Reaktor ist extrem mächtig, hat aber eine spezielle physikalische Eigenschaft:
+* Er strahlt eine Energie aus, die **jedes Material, das ihn berührt, transparent macht**.
+* **Die Konsequenz:** Sobald du diesen Reaktor fest mit deinem Rumpf verbindest (Linking), wird dein **gesamtes Raumschiff aus Glas**.
+* Du kannst keine Geheimwaffen oder versteckte Cockpits mehr haben. Wer den Reaktor nutzt, muss der Welt den Bauplan für das **komplette Schiff** zeigen. Es gilt: Ganz oder gar nicht.
+
+**2. AGPL (Das Schließen des 'Fernrohr-Schlupflochs')**
+Hier haben die Cloud-Provider (wie AWS) einen Trick gefunden:
+* **GPL-Regel:** 'Du musst den Bauplan nur zeigen, wenn du das Schiff an jemanden verkaufst oder verleihst (Distribution).'
+* **Der Cloud-Trick:** AWS behält das Schiff einfach bei sich im Hangar. Sie lassen dich nur durch ein **Fernrohr** (Internet/API) zuschauen, wie es fliegt. Da das Schiff den Hangar nie verlässt, mussten sie den Bauplan nicht zeigen.
+* **Die AGPL-Regel:** Sie sagt: 'Nein! Sobald du jemanden auch nur durchs Fernrohr (Netzwerk) mit dem Schiff interagieren lässt, musst du den Bauplan offenlegen.' Das zwingt AWS dazu, die Karten auf den Tisch zu legen."
 
 --
 ## Lizenz-Dschungel Übersicht
@@ -403,9 +433,6 @@ Note:
 *Hinweis: Elastic und Redis ruderten teilweise zurück*
 
 Note:
-
-* Wieso AGPL? -> Grund: Um den Begriff "Open Source" wieder offiziell nutzen zu dürfen und Vertrauen zurückzugewinnen.
-* AGPL ist OSI anerkannt, aber Strong Copyleft. Jede Änderung am Code muss offengelegt werden. Somit Hosting wieder möglich.
 
 Mongo:
 * 2009 bis 15. Oktober 2018 AGPLv3
@@ -560,6 +587,10 @@ Note:
   </div>
 </section>
 
+Note:
+
+* Valkey numbers are for the core server part, not the whole project, as there we have above 150+ contributors. 
+
 ---
 ## Die Reaktion: Forks!
 > Die Community lässt sich das nicht gefallen.
@@ -596,18 +627,25 @@ Note:
 
 --
 
-<section>
-  <h3>Der ultimative Datenbank-Check</h3>
-  
-  <iframe 
-    data-src="https://howfuckedismydatabase.com/" 
-    width="100%" 
-    height="800px" 
-    style="border: 4px solid #333; border-radius: 10px; background: white;">
-  </iframe>
-  
-</section>
+### Geheimtipp Nr. 5 -  Der ultimative Datenbank-Check
+howfuckedismydatabase.com
+<!-- .element: class="warning-box" -->
 
+<img src="img/howfuckedismydatabase.png" style="background:none; border:none; box-shadow:none;">
+ 
+--
+<img src="img/mysql_clicked.png" style="background:none; border:none; box-shadow:none;">
+--
+<img src="img/mysql-clicked2.png" style="background:none; border:none; box-shadow:none;">
+--
+<img src="img/excel_clicked.png" style="background:none; border:none; box-shadow:none;">
+--
+<img src="img/excel-clicked2.png" style="background:none; border:none; box-shadow:none;">
+--
+<img src="img/msaccess_clicked.png" style="background:none; border:none; box-shadow:none;">
+--
+<img src="img/msaccess-clicked2.png" style="background:none; border:none; box-shadow:none;">
+ 
 ---
 # Fazit
 
