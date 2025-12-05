@@ -651,6 +651,10 @@ howfuckedismydatabase.com
 # Fazit
 
 --
+#### Wer jetzt noch auf MinIO setzt, dem ist auch nicht mehr zu helfen!
+<img src="img/minio.jpg" style="background:none; border:none; box-shadow:none; width:50%;">
+
+--
 
 1. **Namen sind Schall und Rauch.**
    > Nur weil Open Source drauf steht, muss das noch lange nicht stimmen.
@@ -690,7 +694,7 @@ Note:
 
 * Vielleicht sagen wir nicht das was ihr hören wollt, aber das was ihr hören und wissen solltet!
 
----
+--
 # Fragen?
 
 #### Wo finde ich die Präsentation?
