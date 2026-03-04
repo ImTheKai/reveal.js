@@ -165,7 +165,7 @@ There is a massive difference between a "working demo" and a UI that actually ha
 ## Roadmap
 
 * **Email reply from Hackorum** - close the loop (send replies back to the list)
-* **Lazy Loading** - for the messages
+* ~~**Lazy Loading** - for the messages~~
 * **Notification system** - get pinged on patches you care about (Like Slack/GitHub)
 * **More lists** - `pgsql-general`, `pgsql-docs` 
 * **Git history parsing** - to collect merge info, to link to the actual commit in the thread
@@ -398,7 +398,7 @@ There is a massive difference between a "working demo" and a UI that actually ha
 ## Roadmap
 
 * **Email reply from Hackorum** - close the loop (send replies back to the list)
-* **Lazy Loading** - for the messages
+* ~~**Lazy Loading** - for the messages~~
 * **Notification system** - get pinged on patches you care about (Like Slack/GitHub)
 * **More lists** - `pgsql-general`, `pgsql-docs` 
 * **Git history parsing** - to collect merge info, to link to the actual commit in the thread
