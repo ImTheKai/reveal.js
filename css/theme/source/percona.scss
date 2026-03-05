@@ -33,10 +33,10 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 @import "../template/theme";
 // ---------------------------------------------
 
-// Add Percona logo to all slides
+// Add persistent corner graphics to all slides
 .reveal-viewport {
-    background-image: url(/img/logo.png);
-    background-size: 10%;
-    background-repeat: no-repeat;
-    background-position: 96% 96%;
+    background-image: url(/img/hackorum-qrcode.png), url(/img/logo.png);
+    background-size: 6%, 10%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 96% 4%, 96% 96%;
 }
