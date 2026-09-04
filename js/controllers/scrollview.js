@@ -108,6 +108,7 @@ export default class ScrollView {
 			contentContainer.appendChild( slide );
 
 			slide.classList.remove( 'past', 'future' );
+			slide.removeAttribute( 'inert' );
 			slide.setAttribute( 'data-index-h', h );
 			slide.setAttribute( 'data-index-v', v );
 
@@ -646,7 +647,7 @@ export default class ScrollView {
 				page.loaded = true;
 				this.Reveal.slideContent.load( page.slideElement );
 			}
-			else if( page.loaded ) {
+			else if( !shouldPreload && page.loaded ) {
 				page.loaded = false;
 				this.Reveal.slideContent.unload( page.slideElement );
 			}

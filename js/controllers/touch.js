@@ -123,7 +123,7 @@ export default class Touch {
 
 		this.touchCaptured = false;
 
-		if( this.isViewportZoomed() ) return true;
+		// if( this.isViewportZoomed() ) return true;
 		if( this.isSwipePrevented( event.target ) ) return true;
 
 		this.touchStartX = event.touches[0].clientX;
@@ -139,7 +139,7 @@ export default class Touch {
 	 */
 	onTouchMove( event ) {
 
-		if( this.isViewportZoomed() ) return true;
+		// if( this.isViewportZoomed() ) return true;
 		if( this.isSwipePrevented( event.target ) ) return true;
 
 		let config = this.Reveal.getConfig();
