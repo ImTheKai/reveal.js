@@ -358,8 +358,8 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   }
 }
 .reveal-viewport {
-  background-image: url(/img/logo.png);
-  background-size: 10%;
-  background-repeat: no-repeat;
-  background-position: 96% 96%;
+  background-image: url(/img/hackorum-qrcode.png), url(/img/logo.png);
+  background-size: 6%, 10%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 96% 4%, 96% 96%;
 }
