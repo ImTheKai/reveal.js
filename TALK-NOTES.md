@@ -51,7 +51,7 @@ Follows the same conventions as `it-tage-frankfurt-2025` and the Berlin deck:
 
 About **15 minutes**. Everything that was cut is in the vertical **backup** stack under the
 "Backup slides" divider (press down): where it hurts, the 90-second video, thread
-detail, read state, patchsets, the CI dashboard, `hackorum-patch`, commits, profiles, notes,
+detail, read state, patchsets, the CI dashboard, commits, profiles, notes,
 reports, stats, mobile, the four ideas in detail, plus all the original backups.
 
 If you are running long: drop slide 12 (search) and say one sentence about the query
@@ -121,9 +121,12 @@ the same trick the Berlin deck used.
 - [ ] **Jack's intro** on slide 2 is a placeholder. Add his role + one line.
 - [ ] **Zsolt's credit slide (3)** — two things to confirm:
       - he is happy with his photo and profile stats on a conference slide
-      - which PGConf.dev 2025 it was (the slide says just "PGConf.dev 2025"; add
-        the city if you want it). The numbers on it come from the repo:
-        first commit 9 Dec 2025, 279 of 378 commits on `upstream/main`.
+      - the origin story is now Zsolt's own version: he asked "why has nobody built
+        this yet?" in the *Scaling PostgreSQL Development* unconference session at
+        PGConf.dev 2025, then talked it through in the hallway track. The 9 Dec 2025
+        first commit is a 12k-line squash of the initial development; design talks
+        were around November, and it went public on Discord at the end of December.
+        279 of 378 commits on `upstream/main` are his.
 - [ ] **The testimonials slide (44)** names David Steele, Christoph Berg and
       Andrey Borodin. The first two are chat screenshots with avatars; Andrey's is
       a public `pgsql-hackers` message, attributed on the slide. Worth a quick word
