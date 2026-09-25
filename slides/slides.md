@@ -121,7 +121,7 @@ Note:
 <img src="img/hk-zsolt.png" style="height:420px; width:auto; background:none; border:none; box-shadow:none;">
 
 * **Zsolt Parragi** - Staff Software Engineer at Percona, [`@dutow`](https://github.com/dutow)
-* It started with a conversation at **PGConf.dev 2025**: this has to work differently
+* It started with a question at the **PGConf.dev 2025** unconference: *why has nobody built this yet?*
 * First commit **9 December 2025** - and 279 of Hackorum's 378 commits since
 
 > He built it. I mostly filed issues and complained about CSS :-)
@@ -129,8 +129,8 @@ Note:
 Note:
 
 * Before anything else, credit where it is due.
-* This started with a hallway conversation at PGConf.dev in 2025. The usual "why is this still so hard for newcomers" conversation that everybody has and nobody acts on.
-* Zsolt went home and acted on it. First commit on the ninth of December, and he has written about three quarters of the codebase since.
+* This started at PGConf.dev 2025, in the unconference session on scaling PostgreSQL development. Zsolt asked the room why nobody had built this yet, and then spent the rest of the day talking it through with people in the hallway.
+* Then he went home and built it. He and I went back and forth on the design around November. The first commit is dated the ninth of December, but it is twelve thousand lines: the whole initial development squashed into one commit. It went public on Discord at the end of December, and he has written about three quarters of the codebase since.
 * This is his own profile, on the thing he built. Ninety-eight patches sent to the lists, ninety-five commit credits.
 * He is not a web developer who wandered in. He is a Postgres hacker who got annoyed enough to build his own tooling.
 ---
@@ -367,7 +367,7 @@ Note:
 
 Note:
 
-* This is my favourite visual in the product, and it is the answer to "five hundred messages, where do I start".
+* This is the answer to "five hundred messages, where do I start". Zsolt still wants to rework this view, and he is probably right, but even in this state it shows the difference.
 * Email is flat and chronological. Technical arguments are not. They branch.
 * Somebody objects at message four, three people argue about it for fifteen messages, and meanwhile the main line carries on.
 * The thread outline reconstructs that shape from the In-Reply-To headers, colour-codes each branch, and lets you collapse the ones you do not care about.
@@ -444,7 +444,7 @@ Note:
 
 <img src="img/hk-patchsets.png" data-preview-image style="height:600px; width:auto; background:none; border:none; box-shadow:none;">
 
-* Live sync with **commitfest.postgresql.org**, status inline
+* **Daily** sync with **commitfest.postgresql.org**, status inline
 * Commitfest tags, reviewer and committer attribution
 * Every **patchset version** in the thread, with diffstat and one-click download
 
@@ -452,7 +452,7 @@ Note:
 
 Note:
 
-* The commitfest app and the mailing list have always been two halves of the same conversation that could not see each other. We sync them.
+* The commitfest app and the mailing list have always been two halves of the same conversation that could not see each other. We sync them once a day.
 * Patchsets are the other half. A long thread might carry twenty-five versions of a patch, scattered across two years of messages.
 * We detect which messages are patch submissions, group them into versions, and show you a v1 to v25 history with diffstats.
 * You can answer "what did v12 look like" in about four seconds.
@@ -480,7 +480,7 @@ Note:
 * For each patchset we work out the right base commit, apply it, build it, run the full test suite, and keep rebasing it as master moves.
 * Applies, needs rebase, base too old, tests failed. All of it visible, all of it public.
 * This is our own CI, not the project's, and it is explicitly marked beta.
-* It is not a replacement for cfbot. It is an experiment in what happens if this exists for everything, not just commitfest entries.
+* And it does less than cfbot. We run one single Linux job per patchset; the commitfest CI runs ten different ones. It is not a replacement for cfbot. It is an experiment in what happens if a basic build and test exists for everything, not just commitfest entries.
 --
 
 ## One command to try somebody's patch
@@ -503,24 +503,6 @@ Note:
 * And if you want the source, every patchset is also pushed as a branch to our Postgres fork. One git fetch puts you on exactly the tree CI built. Not a tree you hope is the same. The same one.
 --
 
-## ...or the old-fashioned way
-
-```bash
-curl -o ~/bin/hackorum-patch https://hackorum.dev/scripts/hackorum-patch
-chmod +x ~/bin/hackorum-patch
-hackorum-patch 12345
-```
-
-<img src="img/hk-help-patch.png" data-preview-image style="height:600px; width:auto; background:none; border:none; box-shadow:none;">
-
-Note:
-
-* For the people who want the patch in their own checkout, and that is most of you.
-* A small standalone Ruby script with no dependencies beyond git.
-* It downloads the latest patchset, works out the right base commit, creates a review branch, and applies the series.
-* About as boring as a tool can be, which is the highest compliment I can pay it.
---
-
 ## Commits and threads, finally connected
 
 <img src="img/hk-person-commits.png" data-preview-image style="height:800px; width:auto; background:none; border:none; box-shadow:none;">
@@ -528,7 +510,7 @@ Note:
 Note:
 
 * We parse the entire Postgres git history and link commits back to the threads that produced them.
-* Via commit trailers, via Discussion links, and where those are missing, by overlapping the patch files themselves.
+* Via commit trailers and Discussion links. Older commits without a proper link are simply not associated. Matching on the patch files themselves was tried, and it was too unreliable to ship.
 * So a thread now tells you this landed, here is the commit, and here are the branches it was back-patched to.
 * And a person shows their commit credits split by role. Author, committer, reviewer, reported-by, co-author.
 * That last breakdown matters, and it comes back in a few minutes.
@@ -543,7 +525,7 @@ Note:
 * Twenty-seven and a half thousand messages. Three thousand commit credits. Seventeen years.
 * And three email aliases, resolved into one person. That is the panel on the left.
 * Identity resolution is unglamorous and absolutely essential. People change jobs, change addresses, send from their phone. Without merging aliases, every statistic you compute is wrong.
-* We also compute contributor tiers, core team, committer, major and significant contributor, and you can filter search by them.
+* Contributor tiers, core team, committer, major and significant contributor, are mirrored from the main postgresql.org website, and you can filter search by them.
 * And look at "patch threads that landed", seventy-one percent. That is a metric nobody had before.
 --
 
@@ -670,7 +652,7 @@ Note:
 
 The community is building contributor profiles right now.
 
-* Hackorum already computes aliases, tiers, commit credits by role, patch-thread landing rate
+* Hackorum already resolves aliases and computes commit credits by role and patch-thread landing rate
 * That data belongs to the community, not to us
 
 **We should integrate, not duplicate.** What is the right interface - an API, a dump, upstreaming the computation?
@@ -679,7 +661,7 @@ The community is building contributor profiles right now.
 Note:
 
 * This is not a feature request, it is a governance question, which is why I want it discussed on Community Day rather than decided by us.
-* We have accidentally built a fairly rich contributor dataset. Alias resolution, tiers, commit credits split by role, and what fraction of the patch threads somebody started actually landed.
+* We have accidentally built a fairly rich contributor dataset. Alias resolution, commit credits split by role, and what fraction of the patch threads somebody started actually landed.
 * There is separate community-driven work on contributor profiles. The worst possible outcome is two half-good datasets that disagree with each other.
 * So what do you need from us? An API? A periodic dump? Should the computation live somewhere more neutral than a Percona-sponsored side project?
 * We already publish public database dumps. I genuinely do not know if that is the answer or the lazy version of it.
@@ -793,9 +775,9 @@ Note:
 
 Note:
 
-* All three of these are unsolicited. Nobody was asked for a quote, and all three are Postgres contributors.
+* All three are Postgres contributors, and nobody was asked for a quote.
 * David Steele. A pinned tab in my browser, so great to be able to follow hackers without losing my mind. That is the entire value proposition in one sentence, and it is not mine.
-* Christoph Berg made a hackorum channel without us asking.
+* Christoph Berg set up a hackorum channel on the PostgreSQL Hacking Discord when we asked him.
 * And this last one is my favourite. Andrey Borodin apologising for bumping a ten-year-old thread, who only knew it was exactly ten years old because Hackorum told him.
 * That is the whole point. The archive always had that information. Nobody could see it.
 ---
@@ -932,7 +914,7 @@ Note:
 
 Note:
 
-* Search syntax, account linking, and the hackorum-patch tool.
+* Search syntax and account linking.
 * The search guide is worth reading even if you never use Hackorum. It is a decent taxonomy of the questions you might want to ask a mailing list.
 ---
 

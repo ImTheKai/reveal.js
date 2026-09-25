@@ -40,13 +40,13 @@ Follows the same conventions as `it-tage-frankfurt-2025` and the Berlin deck:
 |---|---|---|
 | Hook + who we are + crediting Zsolt | 1–3 | 4 |
 | The problem (the 2022 story, the side-by-side, the firehose) | 4–15 | 9 |
-| What Hackorum is, and the feature tour | 16–34 | 18 |
-| The 90-second walkthrough video, narrated | 35 | 4 |
-| What's next + the four questions | 36–41 | 8 |
-| Community Day CTA, links, Q&A | 42–45 | 5 |
-| Backup slides | 46–59 | — |
+| What Hackorum is, and the feature tour | 16–33 | 17 |
+| The 90-second walkthrough video, narrated | 34 | 4 |
+| What's next + the four questions | 35–40 | 8 |
+| Community Day CTA, links, Q&A | 41–44 | 5 |
+| Backup slides | 45–58 | — |
 
-That is **48 minutes** of content in a 50-minute slot, which leaves room to breathe
+That is **47 minutes** of content in a 50-minute slot, which leaves room to breathe
 and for questions to run over. It got there by dropping the "what we got wrong"
 section (insider-interesting, not audience-interesting) and by replacing the eight
 minute live demo with a recorded walkthrough you talk over.
@@ -62,7 +62,7 @@ community decision, and that decision happens on Friday.
 ## The walkthrough video
 
 `img/hackorum-walkthrough.webm` — 91 seconds, 1600×1000, no audio, autoplays when you
-reach slide 35 and has controls so you can pause and talk. Recorded against the live
+reach slide 34 and has controls so you can pause and talk. Recorded against the live
 site with a scripted Playwright session: a visible cursor and the caption strip are
 injected, and **every non-GET request was blocked during recording**, so nothing in the
 walkthrough touched real data.
@@ -101,14 +101,17 @@ the same trick the Berlin deck used.
 - [ ] **Jack's intro** on slide 2 is a placeholder. Add his role + one line.
 - [ ] **Zsolt's credit slide (3)** — two things to confirm:
       - he is happy with his photo and profile stats on a conference slide
-      - which PGConf.dev 2025 it was (the slide says just "PGConf.dev 2025"; add
-        the city if you want it). The numbers on it come from the repo:
-        first commit 9 Dec 2025, 279 of 378 commits on `upstream/main`.
-- [ ] **The testimonials slide (44)** names David Steele, Christoph Berg and
+      - the origin story is now Zsolt's own version: he asked "why has nobody built
+        this yet?" in the *Scaling PostgreSQL Development* unconference session at
+        PGConf.dev 2025, then talked it through in the hallway track. The 9 Dec 2025
+        first commit is a 12k-line squash of the initial development; design talks
+        were around November, and it went public on Discord at the end of December.
+        279 of 378 commits on `upstream/main` are his.
+- [ ] **The testimonials slide (43)** names David Steele, Christoph Berg and
       Andrey Borodin. The first two are chat screenshots with avatars; Andrey's is
       a public `pgsql-hackers` message, attributed on the slide. Worth a quick word
       with all three before it goes on a conference screen.
-- [ ] **Confirm the Community Day session** time/room and put it on the CTA slide (slide 42).
+- [ ] **Confirm the Community Day session** time/room and put it on the CTA slide (slide 41).
 - [ ] **Re-count the no-reply numbers** on slide 22 before the talk. As of
       24 Sep 2026: **124** of **1,450** patch threads started in the last six months
       have no reply (one in twelve), and **1,279** all time. Queries:
@@ -120,8 +123,8 @@ the same trick the Berlin deck used.
       have moved by October:
       - Slide 13 / notes: August 2026 = 3,076 messages · 278 people · 364 threads · 47 newcomers
       - Slide 25 / notes: 6,327 tracked patchsets · 1,744 CI runs in 24h · 22 in flight
-      - Slide 50 (backup): 11,397 runs in 7d · 84.4% success · median build 2m50s
-      - Slide 29 / notes: Michael Paquier 27,641 messages · 3,026 commit credits · 3 aliases
+      - Slide 49 (backup): 11,397 runs in 7d · 84.4% success · median build 2m50s
+      - Slide 28 / notes: Michael Paquier 27,641 messages · 3,026 commit credits · 3 aliases
       - Slide 19: "index prefetching" = 501 messages
       - Backup teams slide: percona team 43% landed vs committer 71%
 - [ ] **Decide on the team screenshot** (`img/hk-team.png`, backup slides) — it shows 11
@@ -133,10 +136,10 @@ the same trick the Berlin deck used.
       API; only the chrome around them is drawn. Describe it that way if anyone asks —
       "this is what that thread looks like in a mail client", not "here is my Thunderbird".
       Regenerate with the script in the scratchpad if the thread grows.
-- [ ] **Watch the walkthrough video once with the notes open** (slide 35). It is 91
+- [ ] **Watch the walkthrough video once with the notes open** (slide 34). It is 91
       seconds and it cannot fail, but you need to know the beats well enough to talk
       over it without watching it yourself. The beat sheet is in that slide's notes.
-- [ ] **Practice the demo path** (in the speaker notes on slide 32). The `docker run`
+- [ ] **Practice the demo path** (in the speaker notes on slide 26). The `docker run`
       line is the moment of the talk — have a terminal ready and a pre-pulled image.
 
 ## Re-shooting screenshots
