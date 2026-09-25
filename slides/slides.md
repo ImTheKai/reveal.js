@@ -357,7 +357,7 @@ Note:
 
 <div class="cols">
 
-<img src="img/hk-thread-outline.png" data-preview-image style="height:600px; width:auto; background:none; border:none; box-shadow:none;">
+<img src="img/hk-thread-outline.png" data-preview-image style="height:600px; width:auto; flex-shrink:0; background:none; border:none; box-shadow:none;">
 
 * Colour-coded reply branches, reconstructed from `In-Reply-To`
 * *"#5...#20 to Tomas Vondra (#1)"* - a sub-debate you can read or skip as a unit
