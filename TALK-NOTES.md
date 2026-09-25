@@ -1,16 +1,18 @@
-# PGConf.EU 2026 — Hackorum talk
+# Valencia PostgreSQL meetup — Hackorum lightning version
 
-**Session:** Finally a Postgres Communication Hub for Experts and Newcomers
-**When:** Thursday, October 22nd 2026, 09:25–10:15 (50 min), Room Audit 2, Level: Beginner
-**Who:** Jack Bonatakis (Robin) · Kai Wagner (Percona)
-**Abstract:** https://www.postgresql.eu/events/pgconfeu2026/schedule/session/8197-finally-a-postgres-communication-hub-for-experts-and-newcomers/
+**Event:** Barcelona (+Valencia) PostgreSQL User Group, Valencia —
+<https://www.meetup.com/barcelona-postgresql-meetup-group/>
+**When:** Monday, October 19th 2026 (the Monday before PGConf.EU). The event was not
+posted on meetup.com yet when this deck was made; the venue has been ETSINF (UPV) for the
+last two Valencia meetups. Check the date, and add the venue to the title slide if you want it.
+**Slot:** 15 min talk + 5 min Q&A, solo (Kai), **no live demo**.
 
-Slides: `slides/slides.md` (reveal.js markdown, speaker notes after `Note:` on every slide).
-Press `S` in the browser for the speaker view.
+Cut down from the PGConf.EU deck (branch `pgconfeu-2026-valencia-hackorum`).
+Slides: `slides/slides.md`, speaker notes after `Note:` on every slide, each one starts
+with its time budget, e.g. `(~1:00)`. Press `S` in the browser for the speaker view.
 
 **Run it locally:** `python3 -m http.server 8000` from the repo root, then
-<http://localhost:8000/>. (`npm start` needs `npm install` first - this checkout's
-`node_modules` predates the vite build.) Add `?print-pdf` to the URL for PDF export.
+<http://localhost:8000/>. Add `?print-pdf` to the URL for PDF export.
 
 ## Deck conventions
 
@@ -38,26 +40,43 @@ Follows the same conventions as `it-tage-frankfurt-2025` and the Berlin deck:
 
 | Section | Slides | Minutes |
 |---|---|---|
-| Hook + who we are + crediting Zsolt | 1–3 | 4 |
-| The problem (the 2022 story, the side-by-side, the firehose) | 4–15 | 9 |
-| What Hackorum is, and the feature tour | 16–34 | 18 |
-| The 90-second walkthrough video, narrated | 35 | 4 |
-| What's next + the four questions | 36–41 | 8 |
-| Community Day CTA, links, Q&A | 42–45 | 5 |
-| Backup slides | 46–59 | — |
+| Title + who I am + crediting Zsolt | 1–2 | 1:30 |
+| The problem (GitHub, 54 lists, inbox, same thread twice, firehose) | 3–7 | 3:30 |
+| Interface, not protocol | 8 | 1:00 |
+| Hackorum: landing, overview, outline, search, "Patch, no replies" | 9–13 | 4:45 |
+| CI + Docker image, replying to the list | 14–15 | 1:45 |
+| What's next (four ideas on one slide), testimonials | 16–17 | 2:10 |
+| Questions / links | 18 | 0:20 + 5:00 Q&A |
 
-That is **48 minutes** of content in a 50-minute slot, which leaves room to breathe
-and for questions to run over. It got there by dropping the "what we got wrong"
-section (insider-interesting, not audience-interesting) and by replacing the eight
-minute live demo with a recorded walkthrough you talk over.
+About **15 minutes**. Everything that was cut is in the vertical **backup** stack under the
+"Backup slides" divider (press down): where it hurts, the 90-second video, thread
+detail, read state, patchsets, the CI dashboard, `hackorum-patch`, commits, profiles, notes,
+reports, stats, mobile, the four ideas in detail, plus all the original backups.
 
-Slide 17 (*What Hackorum gives you*) is the signpost for the whole tour — if you are
-running long, that slide plus the video carries the section on its own.
+If you are running long: drop slide 12 (search) and say one sentence about the query
+language on slide 13; drop 17 (testimonials).
 
-The red thread: **every Postgres conversation that matters already happened — you just
-can't find it, follow it, or join it.** Hackorum turns the firehose into something you can
-drink from — it reads, finds, tracks, tests, links and talks back; what happens next is a
-community decision, and that decision happens on Friday.
+What changed compared to the conference deck:
+
+* solo speaker, no Jack; Zsolt's credit folded into the "Who am I" slide
+* the 2022 story is 3 slides instead of 6
+* "the lists are not the problem" and "why we can't replace email" are now one slide
+* no video and no "run it now" `docker run` moment; the docker line stays as a picture
+* the four ideas and the four questions are one slide
+* Community Day is a sentence pointing people to PGConf.EU that week, not a CTA slide
+* the Q&A cheat sheet is in the notes of the "Questions?" slide
+
+## Audience interaction
+
+Only two moments; there isn't time for more:
+
+1. **Slide 1**: who reads -hackers, who read all of last week.
+2. **Slide 13**: "who has sent a patch and never heard back?" before the fragment reveal.
+
+The last two Valencia meetups were at the university (ETSINF), so expect students and
+people who don't know the lists yet. The problem section is written for them.
+
+## Inherited notes from the conference deck
 
 ## The walkthrough video
 
