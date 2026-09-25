@@ -78,9 +78,9 @@
 </style>
 <!-- .slide: class="title-slide" -->
 
-## Finally a Postgres<br>Communication Hub
+## Managing the Postgres<br>Developer Firehose
 
-### for Experts and Newcomers
+### with hackorum.dev
 
 Making 30 years of mailing list actually usable.
 

@@ -1,5 +1,6 @@
 # Valencia PostgreSQL meetup — Hackorum lightning version
 
+**Title:** Managing the Postgres Developer Firehose with hackorum.dev
 **Event:** Barcelona (+Valencia) PostgreSQL User Group, Valencia —
 <https://www.meetup.com/barcelona-postgresql-meetup-group/>
 **When:** Monday, October 19th 2026 (the Monday before PGConf.EU). The event was not
