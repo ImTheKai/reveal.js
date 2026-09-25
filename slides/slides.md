@@ -103,17 +103,58 @@ Note:
     * I "bleed" open and have worked with and in Open Source for about 17y now
     * I worked on a variety of open source projects, including Ceph and the Linux Kernel at SUSE
     * I'm a licensed handball coach for over 20y as well as an agility and movement coach for kids
-* **Jack Bonatakis** - Robin
+* **Jack Bonatakis** - Principal Engineer at Robin
+    * Definitely not a Postgres hacker
+    * Interested in open source development, but new and overwhelmed 🤯
+    * Built pginbox, then joined forces with Hackorum
 
 > Two companies, one project.
 > We are the people who got lost in the mailing lists and decided to build a map.
 
 Note:
 
-* I am not a Postgres hacker by trade. I came from Ceph and the Linux kernel, and I have been doing open source for about seventeen years.
+* **Kai:** I am not a Postgres hacker by trade. I came from Ceph and the Linux kernel, and I have been doing open source for about seventeen years.
 * I remember exactly what it felt like to be confused by this project, because I was confused by it not long ago.
 * Two companies, one side project. Jack is at Robin, I am at Percona, and this is not a Percona product.
 * And yes, I am a handball coach. Twenty years of getting beginners good enough to play with the good players. That is the same problem.
+* **Handoff to Jack:** We arrived at this project separately. Jack, tell them how you got here.
+---
+
+## How did I end up here?
+
+* A problem at **Robin** sent me under the hood of Postgres
+* Got curious. Subscribed to a few mailing lists.
+* Woke up the next day to **hundreds of emails**
+* "I can build a tool to fix this." Enter **pginbox**.
+* Meanwhile, **Kai and Zsolt** were tackling the same problem with **Hackorum**
+
+> My inbox problem turned out to be a community problem.
+
+Note:
+
+* **Jack (~90 seconds):** So why are you all here listening to someone who just told you he's definitely not a Postgres hacker?
+* I was solving a problem at Robin that forced me to peek under the hood of our Postgres database. That got me curious about how Postgres itself gets built.
+* So I naively subscribed to a few of the mailing lists. I woke up the next day with literally hundreds of emails in my inbox.
+* Like any good hacker, my first thought was: "I can build a tool to fix this experience." Apparently "not a Postgres hacker" still leaves plenty of room to build another web app.
+* That became pginbox. I wanted a way to follow these conversations without drowning in my own inbox.
+* I had no idea Hackorum was already in the works, or that the same idea had come up at PGConf.dev 2025. I was solving a problem for myself while Kai and Zsolt were independently working on the same thing.
+* My inbox problem was a community problem. Then Kai, Zsolt and I got on a call.
+---
+
+## From pginbox to Hackorum
+
+* **pginbox:** my inbox-style reader for the Postgres mailing lists
+* **Hackorum:** Kai and Zsolt's forum-style reader for pgsql-hackers
+* Built independently. Same problem, same community.
+* We got on a call and compared what we'd built and where we wanted to go
+* The decision: **sunset pginbox and build Hackorum together**
+
+Note:
+
+* **Jack (~30 seconds):** On that call, we compared what we had built, what worked, and what we wanted to do next. We were trying to help the same people follow the same conversations.
+* It made more sense to put our effort into one project. We decided to sunset pginbox, and I joined the Hackorum team. That is why I am here presenting Hackorum with Kai today.
+* **Handoff to Kai:** And that brings us to the person who built Hackorum.
+* Background: [Two projects, one mission — Hackorum and pginbox join forces](https://percona.community/blog/2026/05/13/two-projects-one-mission-hackorum-and-pginbox-join-forces/).
 ---
 
 ## The brain behind Hackorum
@@ -128,7 +169,7 @@ Note:
 
 Note:
 
-* Before anything else, credit where it is due.
+* **Kai:** That is Zsolt. Credit where it is due.
 * This started at PGConf.dev 2025, in the unconference session on scaling PostgreSQL development. Zsolt asked the room why nobody had built this yet, and then spent the rest of the day talking it through with people in the hallway.
 * Then he went home and built it. He and I went back and forth on the design around November. The first commit is dated the ninth of December, but it is twelve thousand lines: the whole initial development squashed into one commit. It went public on Discord at the end of December, and he has written about three quarters of the codebase since.
 * This is his own profile, on the thing he built. Ninety-eight patches sent to the lists, ninety-five commit credits.
@@ -141,7 +182,7 @@ Note:
 
 Note:
 
-* Quick replay of how I got here, because everything Hackorum does comes from this.
+* **Kai:** My route into this started back in 2022. Different starting point, same overflowing inbox.
 * 2022. New to Postgres. I do what every developer on Earth does in 2022. I go to GitHub.
 --
 
