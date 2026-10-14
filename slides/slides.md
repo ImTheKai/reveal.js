@@ -94,6 +94,18 @@ Note:
 * Nobody. That is not a personal failing, it is a structural one. That is the next fifteen minutes.
 ---
 
+## Follow along on your own device
+
+<img src="img/qr-slides.png" alt="QR code linking to these slides" style="height:640px; width:auto; background:none; border:none; box-shadow:none;">
+
+<p class="venue">imthekai.github.io/pgmeetup-valencia-oct-2026-hackorum</p>
+
+Note:
+
+* If the screen is hard to read from where you sit, scan this and follow the slides on your phone or laptop.
+* The same link stays up after the talk.
+---
+
 ## Who am I - and who built it
 
 <div class="cols">
