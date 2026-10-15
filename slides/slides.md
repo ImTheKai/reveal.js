@@ -110,7 +110,7 @@ Note:
 
 <div class="cols">
 
-<img src="img/hk-zsolt.png" style="height:260px; width:auto; background:none; border:none; box-shadow:none;">
+<img src="img/zsolt-card.png" style="height:230px; width:auto; background:none; border:none; box-shadow:none;">
 
 * **Kai Wagner** - Percona
     * ~17y open source: Ceph, Linux kernel, Postgres
@@ -118,6 +118,7 @@ Note:
     * Idea: **PGConf.dev 2025** unconference
     * First commit **9 Dec 2025**
     * 279 of 378 commits
+    * 98 patches sent to the lists himself
 
 </div>
 
@@ -160,32 +161,30 @@ Note:
 * (~0:20) I subscribed to one list. This is my mailbox after a holiday.
 --
 
-## The same thread, twice
+## One thread, in your mail client
 
-<div class="cols">
-
-<img src="img/mailclient-thread.png" data-preview-image style="width:870px; height:auto; background:none; border:none; box-shadow:none;">
-
-<img src="img/hk-thread-compare.png" data-preview-image style="width:870px; height:auto; background:none; border:none; box-shadow:none;">
-
-</div>
+<img src="img/mailclient-thread.png" data-preview-image style="height:740px; width:auto; background:none; border:none; box-shadow:none;">
 
 **504 messages. 503 of them called "Re: index prefetching". 21 people. Three years.**
 
 Note:
 
-* (~1:30) Left: that thread in a mail client. Right: the same thread in Hackorum. Same messages, same archive.
-* Real senders, real dates. Five hundred and four messages, five hundred and three with the identical subject. Started June 2023, still going.
-* Where is the objection that changed the design? Let the silence answer.
-* On the right, the reply structure recovered from headers that were in the mail all along.
-* If you remember one slide from tonight, remember this one.
+* (~1:00) This is one thread. Real senders, real dates, nothing invented.
+* Five hundred and four messages. Five hundred and three of them have the identical subject line. Twenty-one people. Started June 2023, still going this morning.
+* Somewhere in there is the objection that changed the design. Where? Let the silence answer.
+* The information is all there. None of it is visible.
 --
 
 ## The firehose, in numbers
 
-<img src="img/hk-report-monthly.png" data-preview-image style="height:600px; width:auto; background:none; border:none; box-shadow:none;">
+<br>
 
-**August 2026 alone:** 3,076 messages &middot; 278 active people &middot; 364 new threads &middot; 47 newcomers
+## 3,076 messages
+### in one month, on the lists
+
+<br>
+
+**278 active people &middot; 364 new threads &middot; 47 people posting for the first time**
 
 > That is a message **every 14 minutes**, day and night, for a month.
 <!-- .element: class="fragment highlight-box" -->
@@ -243,24 +242,25 @@ Note:
 * (~0:45) The map for the rest of the talk. I will show four of these; the rest are in the backup slides if you ask.
 --
 
-## The shape of a 501-message argument
+## The same thread, twice
 
 <div class="cols">
 
-<img src="img/hk-thread-outline.png" data-preview-image style="height:600px; width:auto; flex-shrink:0; background:none; border:none; box-shadow:none;">
+<img src="img/mailclient-thread.png" data-preview-image style="width:870px; height:auto; background:none; border:none; box-shadow:none;">
 
-* Reply branches from `In-Reply-To`
-* *"#5...#20 to Tomas Vondra"*:<br>a sub-debate, read or skip
-* Per-message read state
+<img src="img/hk-thread-compare.png" data-preview-image style="width:870px; height:auto; background:none; border:none; box-shadow:none;">
 
 </div>
 
+**Same messages. Same archive. The reply structure was in the headers all along.**
+
 Note:
 
-* (~1:00) Email is flat and chronological. Technical arguments branch.
-* Somebody objects at message four, three people argue for fifteen messages, the main line carries on.
-* The outline recovers that shape and lets you collapse what you do not care about. Zsolt still wants to rework this view, but even as it is, it shows the difference.
+* (~1:00) Remember that wall of identical subject lines? Same thread, same messages, same archive. On the right, Hackorum.
+* Email is flat and chronological. Technical arguments branch. Somebody objects at message four, three people argue for fifteen messages, the main line carries on.
+* The outline recovers that shape from the In-Reply-To headers and lets you collapse what you do not care about. Zsolt still wants to rework this view, but even as it is, it shows the difference.
 * Read state is per message, not per thread. On five hundred messages, unread-yes-or-no is useless.
+* If you remember one slide from tonight, remember this one.
 --
 
 ## Search that is actually a query language
@@ -442,6 +442,24 @@ Note:
 * 1:12 And you can answer the list from here. Your address, correct headers, real mail.
 * 1:20 Thousands of patch builds a day.
 * 1:28 That is hackorum.dev. It is open, go and break it.
+--
+
+## Backup: the thread outline, close up
+
+<div class="cols">
+
+<img src="img/hk-thread-outline.png" data-preview-image style="height:600px; width:auto; flex-shrink:0; background:none; border:none; box-shadow:none;">
+
+* Reply branches from `In-Reply-To`
+* *"#5...#20 to Tomas Vondra"*:<br>a sub-debate, read or skip
+* Per-message read state
+
+</div>
+
+Note:
+
+* Colour-coded branches, collapsible as a unit, and every entry jumps straight to that message.
+
 --
 
 ## Backup: One thread = one Topic

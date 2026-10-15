@@ -41,10 +41,10 @@ Follows the same conventions as `it-tage-frankfurt-2025` and the Berlin deck:
 
 | Section | Slides | Minutes |
 |---|---|---|
-| Title + who I am + crediting Zsolt | 1–2 | 1:30 |
-| The problem (GitHub, 54 lists, inbox, same thread twice, firehose) | 3–7 | 3:30 |
-| Interface, not protocol | 8 | 1:00 |
-| Hackorum: landing, overview, outline, search, "Patch, no replies" | 9–13 | 4:45 |
+| Title + who I am + crediting Zsolt | 1–3 | 1:30 |
+| The problem (GitHub, 54 lists, inbox, one thread in a mail client, the numbers) | 4–8 | 3:30 |
+| Interface, not protocol | 9 | 1:00 |
+| Hackorum: landing, overview, the same thread twice, search, "Patch, no replies" | 10–14 | 4:45 |
 | CI + Docker image, replying to the list | 14–15 | 1:45 |
 | What's next (four ideas on one slide), testimonials | 16–17 | 2:10 |
 | Questions / links | 18 | 0:20 + 5:00 Q&A |
@@ -54,8 +54,8 @@ About **15 minutes**. Everything that was cut is in the vertical **backup** stac
 detail, read state, patchsets, the CI dashboard, commits, profiles, notes,
 reports, stats, mobile, the four ideas in detail, plus all the original backups.
 
-If you are running long: drop slide 12 (search) and say one sentence about the query
-language on slide 13; drop 17 (testimonials).
+If you are running long: drop slide 13 (search) and say one sentence about the query
+language on slide 14; drop 18 (testimonials).
 
 What changed compared to the conference deck:
 
@@ -67,12 +67,22 @@ What changed compared to the conference deck:
 * Community Day is a sentence pointing people to PGConf.EU that week, not a CTA slide
 * the Q&A cheat sheet is in the notes of the "Questions?" slide
 
+## No Hackorum before the reveal
+
+Nothing of the Hackorum UI appears before slide 10. The problem section shows only
+the mail client, the mailing list index and plain numbers, so the landing page on
+slide 10 is the first time the audience sees the product.
+
+The "same thread, twice" comparison is the payoff for that setup and now sits on
+slide 12, after the reveal. The thread-outline close-up moved to the backup stack.
+Zsolt's slide uses a cropped photo card rather than his Hackorum profile page.
+
 ## Audience interaction
 
 Only two moments; there isn't time for more:
 
 1. **Slide 1**: who reads -hackers, who read all of last week.
-2. **Slide 13**: "who has sent a patch and never heard back?" before the fragment reveal.
+2. **Slide 14**: "who has sent a patch and never heard back?" before the fragment reveal.
 
 The last two Valencia meetups were at the university (ETSINF), so expect students and
 people who don't know the lists yet. The problem section is written for them.
