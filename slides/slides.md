@@ -835,6 +835,8 @@ Note:
 * That is the whole point. The archive always had that information. Nobody could see it.
 ---
 
+<!-- .slide: data-state="no-corner-qr" -->
+
 # Questions?
 
 <div style="display:flex; align-items:center; justify-content:center; gap:80px;">
@@ -843,6 +845,7 @@ Note:
 
 ### Find us after the talk, or online:
 
+**jack.bonatakis@robinpowered.com**<br>
 **kai.wagner@percona.com**
 
 [hackorum.dev](https://hackorum.dev) &middot; [github.com/hackorum-dev/hackorum](https://github.com/hackorum-dev/hackorum)

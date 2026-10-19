@@ -363,3 +363,10 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   background-repeat: no-repeat, no-repeat;
   background-position: 96% 4%, 96% 96%;
 }
+
+.reveal-viewport.no-corner-qr {
+  background-image: url(../../img/logo.png);
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-position: 96% 96%;
+}

@@ -102,7 +102,8 @@ the same trick the Berlin deck used.
 
 The **Questions** slide carries a second, larger QR code: the PGConf.EU feedback form for
 this talk (postgresql.eu/events/pgconfeu2026/feedback/8197/). Point at it before taking
-the first question and leave the slide up for the whole Q&A.
+the first question and leave the slide up for the whole Q&A. The corner hackorum.dev QR is
+hidden on that slide (`data-state="no-corner-qr"`) so phones only see the feedback code.
 
 ## Before the talk — TODO
 

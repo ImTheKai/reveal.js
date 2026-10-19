@@ -41,3 +41,12 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
     background-repeat: no-repeat, no-repeat;
     background-position: 96% 4%, 96% 96%;
 }
+
+// Slides with data-state="no-corner-qr" (e.g. one showing its own QR code) keep only the logo,
+// so phones don't pick up the wrong code
+.reveal-viewport.no-corner-qr {
+    background-image: url(../../img/logo.png);
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: 96% 96%;
+}
