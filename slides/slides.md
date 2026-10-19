@@ -837,6 +837,10 @@ Note:
 
 # Questions?
 
+<div style="display:flex; align-items:center; justify-content:center; gap:80px;">
+
+<div style="text-align:left;">
+
 ### Find us after the talk, or online:
 
 **kai.wagner@percona.com**
@@ -845,7 +849,23 @@ Note:
 
 ### And on **Friday** at the Community Events Day.
 
+</div>
+
+<div style="text-align:center; flex-shrink:0;">
+
+**Please rate this talk!**
+
+<img src="img/feedback-qrcode.png" style="background:none; border:none; box-shadow:none; width:420px; margin:10px 0;">
+
+<small>Two minutes, it really helps.</small>
+
+</div>
+
+</div>
+
 Note:
+
+* Before the questions: the QR code on the right is the PGConf.EU feedback form for this talk. It will stay up the whole time, so scan it while you think of a question. Two minutes, and it is the only way we find out what worked.
 
 * The question I get asked most is whether this is trying to replace the mailing lists. No, and the architecture makes it impossible. Every message is a real list message.
 * Who pays for this? Percona sponsors the development and the hosting today. That is exactly why the governance question matters, and it is a fair thing to be uncomfortable about.

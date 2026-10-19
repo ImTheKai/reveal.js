@@ -100,6 +100,10 @@ The QR code for hackorum.dev now sits in the top-right corner of **every** slide
 in the theme, not the markdown), so anyone can open it and follow along at any point —
 the same trick the Berlin deck used.
 
+The **Questions** slide carries a second, larger QR code: the PGConf.EU feedback form for
+this talk (postgresql.eu/events/pgconfeu2026/feedback/8197/). Point at it before taking
+the first question and leave the slide up for the whole Q&A.
+
 ## Before the talk — TODO
 
 - [x] **Jack's intro** on slide 2: role, newcomer perspective, and pginbox joining Hackorum.
